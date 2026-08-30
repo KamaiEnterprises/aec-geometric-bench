@@ -1,0 +1,846 @@
+{
+ "_note": "Per-sheet scores for the 15 released sheets. Object F1 over the eight scored classes at IoU 0.50, whole page scored. Corpus figures in the paper are pooled over all 312 sheets and are not the mean of these.",
+ "_taxonomy_ref": "see taxonomy.json in this directory",
+ "sheets": {
+  "sheet_01": {
+   "Kamai": {
+    "object_tp": 27,
+    "object_fp": 10,
+    "object_fn": 2,
+    "object_f1": 0.8182,
+    "area_instance_f1": 0.9643,
+    "area_pixel_f1": 0.994,
+    "wall_pixel_f1": 0.9734
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 0,
+    "object_fp": 20,
+    "object_fn": 29,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.125,
+    "area_pixel_f1": 0.5736,
+    "wall_pixel_f1": 0.3947
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 19,
+    "object_fn": 29,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.3077,
+    "area_pixel_f1": 0.5769,
+    "wall_pixel_f1": 0.1762
+   },
+   "Claude Opus 5": {
+    "object_tp": 1,
+    "object_fp": 19,
+    "object_fn": 28,
+    "object_f1": 0.0408,
+    "area_instance_f1": 0.4889,
+    "area_pixel_f1": 0.8236,
+    "wall_pixel_f1": 0.3525
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 16,
+    "object_fn": 29,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.5455,
+    "area_pixel_f1": 0.7334,
+    "wall_pixel_f1": 0.4379
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 21,
+    "object_fn": 29,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.1739,
+    "area_pixel_f1": 0.7412,
+    "wall_pixel_f1": 0.1367
+   }
+  },
+  "sheet_02": {
+   "Kamai": {
+    "object_tp": 37,
+    "object_fp": 1,
+    "object_fn": 0,
+    "object_f1": 0.9867,
+    "area_instance_f1": 0.8293,
+    "area_pixel_f1": 0.9855,
+    "wall_pixel_f1": 0.9178
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 2,
+    "object_fp": 11,
+    "object_fn": 35,
+    "object_f1": 0.08,
+    "area_instance_f1": 0.3448,
+    "area_pixel_f1": 0.8942,
+    "wall_pixel_f1": 0.6314
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 20,
+    "object_fn": 37,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.7,
+    "area_pixel_f1": 0.8934,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 1,
+    "object_fp": 14,
+    "object_fn": 36,
+    "object_f1": 0.0385,
+    "area_instance_f1": 0.3478,
+    "area_pixel_f1": 0.8388,
+    "wall_pixel_f1": 0.4292
+   },
+   "Claude Fable 5": {
+    "object_tp": 1,
+    "object_fp": 7,
+    "object_fn": 36,
+    "object_f1": 0.0444,
+    "area_instance_f1": 0.3684,
+    "area_pixel_f1": 0.8051,
+    "wall_pixel_f1": 0.2938
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 32,
+    "object_fn": 37,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.5714,
+    "area_pixel_f1": 0.8926,
+    "wall_pixel_f1": 0.3357
+   }
+  },
+  "sheet_03": {
+   "Kamai": {
+    "object_tp": 38,
+    "object_fp": 2,
+    "object_fn": 2,
+    "object_f1": 0.95,
+    "area_instance_f1": 0.9268,
+    "area_pixel_f1": 0.9861,
+    "wall_pixel_f1": 0.8852
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 10,
+    "object_fp": 22,
+    "object_fn": 30,
+    "object_f1": 0.2778,
+    "area_instance_f1": 0.4,
+    "area_pixel_f1": 0.9146,
+    "wall_pixel_f1": 0.5256
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 35,
+    "object_fn": 40,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.7461,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 5,
+    "object_fp": 19,
+    "object_fn": 35,
+    "object_f1": 0.1562,
+    "area_instance_f1": 0.3478,
+    "area_pixel_f1": 0.8353,
+    "wall_pixel_f1": 0.3096
+   },
+   "Claude Fable 5": {
+    "object_tp": 3,
+    "object_fp": 13,
+    "object_fn": 37,
+    "object_f1": 0.1071,
+    "area_instance_f1": 0.439,
+    "area_pixel_f1": 0.8672,
+    "wall_pixel_f1": 0.361
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 24,
+    "object_fn": 40,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.8275,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_04": {
+   "Kamai": {
+    "object_tp": 45,
+    "object_fp": 8,
+    "object_fn": 1,
+    "object_f1": 0.9091,
+    "area_instance_f1": 0.92,
+    "area_pixel_f1": 0.993,
+    "wall_pixel_f1": 0.9517
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 46,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.8489,
+    "wall_pixel_f1": 0.2345
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 46,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.0,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 46,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.2222,
+    "area_pixel_f1": 0.7658,
+    "wall_pixel_f1": 0.1691
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 46,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0645,
+    "area_pixel_f1": 0.8296,
+    "wall_pixel_f1": 0.2534
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 21,
+    "object_fn": 46,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.1667,
+    "area_pixel_f1": 0.7767,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_05": {
+   "Kamai": {
+    "object_tp": 37,
+    "object_fp": 7,
+    "object_fn": 10,
+    "object_f1": 0.8132,
+    "area_instance_f1": 0.9189,
+    "area_pixel_f1": 0.9927,
+    "wall_pixel_f1": 0.9557
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 2,
+    "object_fp": 30,
+    "object_fn": 45,
+    "object_f1": 0.0506,
+    "area_instance_f1": 0.0952,
+    "area_pixel_f1": 0.8554,
+    "wall_pixel_f1": 0.2677
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 3,
+    "object_fp": 42,
+    "object_fn": 44,
+    "object_f1": 0.0652,
+    "area_instance_f1": 0.3704,
+    "area_pixel_f1": 0.835,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 4,
+    "object_fp": 19,
+    "object_fn": 43,
+    "object_f1": 0.1143,
+    "area_instance_f1": 0.5556,
+    "area_pixel_f1": 0.832,
+    "wall_pixel_f1": 0.2674
+   },
+   "Claude Fable 5": {
+    "object_tp": 3,
+    "object_fp": 21,
+    "object_fn": 44,
+    "object_f1": 0.0845,
+    "area_instance_f1": 0.1333,
+    "area_pixel_f1": 0.7526,
+    "wall_pixel_f1": 0.3478
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 28,
+    "object_fn": 47,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.2609,
+    "area_pixel_f1": 0.7956,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_06": {
+   "Kamai": {
+    "object_tp": 31,
+    "object_fp": 0,
+    "object_fn": 17,
+    "object_f1": 0.7848,
+    "area_instance_f1": 0.9388,
+    "area_pixel_f1": 0.991,
+    "wall_pixel_f1": 0.9056
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 1,
+    "object_fp": 12,
+    "object_fn": 47,
+    "object_f1": 0.0328,
+    "area_instance_f1": 0.069,
+    "area_pixel_f1": 0.6906,
+    "wall_pixel_f1": 0.1861
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 1,
+    "object_fp": 11,
+    "object_fn": 47,
+    "object_f1": 0.0333,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.0732,
+    "wall_pixel_f1": 0.3427
+   },
+   "Claude Opus 5": {
+    "object_tp": 3,
+    "object_fp": 7,
+    "object_fn": 45,
+    "object_f1": 0.1034,
+    "area_instance_f1": 0.4103,
+    "area_pixel_f1": 0.8368,
+    "wall_pixel_f1": 0.3619
+   },
+   "Claude Fable 5": {
+    "object_tp": 3,
+    "object_fp": 8,
+    "object_fn": 45,
+    "object_f1": 0.1017,
+    "area_instance_f1": 0.3684,
+    "area_pixel_f1": 0.9085,
+    "wall_pixel_f1": 0.3805
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 26,
+    "object_fn": 48,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0571,
+    "area_pixel_f1": 0.7443,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_07": {
+   "Kamai": {
+    "object_tp": 37,
+    "object_fp": 17,
+    "object_fn": 27,
+    "object_f1": 0.6271,
+    "area_instance_f1": 0.9655,
+    "area_pixel_f1": 0.995,
+    "wall_pixel_f1": 0.9665
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 0,
+    "object_fp": 16,
+    "object_fn": 64,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.8776,
+    "wall_pixel_f1": 0.4476
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 21,
+    "object_fn": 64,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.4,
+    "area_pixel_f1": 0.681,
+    "wall_pixel_f1": 0.2333
+   },
+   "Claude Opus 5": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 64,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.3478,
+    "area_pixel_f1": 0.8637,
+    "wall_pixel_f1": 0.4388
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 64,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.6364,
+    "area_pixel_f1": 0.911,
+    "wall_pixel_f1": 0.3856
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 1,
+    "object_fp": 10,
+    "object_fn": 63,
+    "object_f1": 0.0267,
+    "area_instance_f1": 0.4348,
+    "area_pixel_f1": 0.8892,
+    "wall_pixel_f1": 0.5036
+   }
+  },
+  "sheet_08": {
+   "Kamai": {
+    "object_tp": 76,
+    "object_fp": 0,
+    "object_fn": 0,
+    "object_f1": 1.0,
+    "area_instance_f1": 1.0,
+    "area_pixel_f1": 0.9948,
+    "wall_pixel_f1": 0.8769
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 8,
+    "object_fp": 16,
+    "object_fn": 68,
+    "object_f1": 0.16,
+    "area_instance_f1": 0.4444,
+    "area_pixel_f1": 0.8144,
+    "wall_pixel_f1": 0.0
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 11,
+    "object_fp": 55,
+    "object_fn": 65,
+    "object_f1": 0.1549,
+    "area_instance_f1": 0.3704,
+    "area_pixel_f1": 0.7038,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 3,
+    "object_fp": 41,
+    "object_fn": 73,
+    "object_f1": 0.05,
+    "area_instance_f1": 0.6,
+    "area_pixel_f1": 0.8204,
+    "wall_pixel_f1": 0.3683
+   },
+   "Claude Fable 5": {
+    "object_tp": 1,
+    "object_fp": 29,
+    "object_fn": 75,
+    "object_f1": 0.0189,
+    "area_instance_f1": 0.2,
+    "area_pixel_f1": 0.7832,
+    "wall_pixel_f1": 0.2398
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 1,
+    "object_fp": 35,
+    "object_fn": 75,
+    "object_f1": 0.0179,
+    "area_instance_f1": 0.15,
+    "area_pixel_f1": 0.7723,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_09": {
+   "Kamai": {
+    "object_tp": 75,
+    "object_fp": 5,
+    "object_fn": 6,
+    "object_f1": 0.9317,
+    "area_instance_f1": 0.9057,
+    "area_pixel_f1": 0.9644,
+    "wall_pixel_f1": 0.9017
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 0,
+    "object_fp": 35,
+    "object_fn": 81,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.8724,
+    "wall_pixel_f1": 0.0
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 77,
+    "object_fn": 81,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.186,
+    "area_pixel_f1": 0.7381,
+    "wall_pixel_f1": 0.3089
+   },
+   "Claude Opus 5": {
+    "object_tp": 0,
+    "object_fp": 20,
+    "object_fn": 81,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.1633,
+    "area_pixel_f1": 0.7811,
+    "wall_pixel_f1": 0.2483
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 11,
+    "object_fn": 81,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.2051,
+    "area_pixel_f1": 0.7643,
+    "wall_pixel_f1": 0.2129
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 1,
+    "object_fp": 26,
+    "object_fn": 80,
+    "object_f1": 0.0185,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.8835,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_10": {
+   "Kamai": {
+    "object_tp": 86,
+    "object_fp": 1,
+    "object_fn": 2,
+    "object_f1": 0.9829,
+    "area_instance_f1": 0.972,
+    "area_pixel_f1": 0.9875,
+    "wall_pixel_f1": 0.9587
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 3,
+    "object_fp": 54,
+    "object_fn": 85,
+    "object_f1": 0.0414,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.9066,
+    "wall_pixel_f1": 0.433
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 52,
+    "object_fn": 88,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0667,
+    "area_pixel_f1": 0.7662,
+    "wall_pixel_f1": 0.3039
+   },
+   "Claude Opus 5": {
+    "object_tp": 5,
+    "object_fp": 57,
+    "object_fn": 83,
+    "object_f1": 0.0667,
+    "area_instance_f1": 0.3855,
+    "area_pixel_f1": 0.7524,
+    "wall_pixel_f1": 0.3423
+   },
+   "Claude Fable 5": {
+    "object_tp": 1,
+    "object_fp": 39,
+    "object_fn": 87,
+    "object_f1": 0.0156,
+    "area_instance_f1": 0.2821,
+    "area_pixel_f1": 0.789,
+    "wall_pixel_f1": 0.31
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 52,
+    "object_fn": 88,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0606,
+    "area_pixel_f1": 0.8428,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_11": {
+   "Kamai": {
+    "object_tp": 131,
+    "object_fp": 21,
+    "object_fn": 8,
+    "object_f1": 0.9003,
+    "area_instance_f1": 0.958,
+    "area_pixel_f1": 0.9803,
+    "wall_pixel_f1": 0.8588
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 0,
+    "object_fp": 61,
+    "object_fn": 139,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0857,
+    "area_pixel_f1": 0.7479,
+    "wall_pixel_f1": 0.0
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 58,
+    "object_fn": 139,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.0,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 1,
+    "object_fp": 62,
+    "object_fn": 138,
+    "object_f1": 0.0099,
+    "area_instance_f1": 0.1188,
+    "area_pixel_f1": 0.7579,
+    "wall_pixel_f1": 0.1947
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 139,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.2418,
+    "area_pixel_f1": 0.6525,
+    "wall_pixel_f1": 0.3132
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 52,
+    "object_fn": 139,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0488,
+    "area_pixel_f1": 0.652,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_12": {
+   "Kamai": {
+    "object_tp": 143,
+    "object_fp": 1,
+    "object_fn": 3,
+    "object_f1": 0.9862,
+    "area_instance_f1": 1.0,
+    "area_pixel_f1": 0.9924,
+    "wall_pixel_f1": 0.9121
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 2,
+    "object_fp": 22,
+    "object_fn": 144,
+    "object_f1": 0.0235,
+    "area_instance_f1": 0.0294,
+    "area_pixel_f1": 0.7513,
+    "wall_pixel_f1": 0.0
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 2,
+    "object_fp": 52,
+    "object_fn": 144,
+    "object_f1": 0.02,
+    "area_instance_f1": 0.0571,
+    "area_pixel_f1": 0.7953,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 1,
+    "object_fp": 11,
+    "object_fn": 145,
+    "object_f1": 0.0127,
+    "area_instance_f1": 0.1101,
+    "area_pixel_f1": 0.7582,
+    "wall_pixel_f1": 0.26
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 14,
+    "object_fn": 146,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.275,
+    "area_pixel_f1": 0.791,
+    "wall_pixel_f1": 0.3409
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 53,
+    "object_fn": 146,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.7353,
+    "wall_pixel_f1": 0.1109
+   }
+  },
+  "sheet_13": {
+   "Kamai": {
+    "object_tp": 163,
+    "object_fp": 20,
+    "object_fn": 7,
+    "object_f1": 0.9235,
+    "area_instance_f1": 0.9744,
+    "area_pixel_f1": 0.978,
+    "wall_pixel_f1": 0.964
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 4,
+    "object_fp": 22,
+    "object_fn": 166,
+    "object_f1": 0.0408,
+    "area_instance_f1": 0.0392,
+    "area_pixel_f1": 0.7898,
+    "wall_pixel_f1": 0.0
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 9,
+    "object_fn": 170,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.02,
+    "area_pixel_f1": 0.0542,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 170,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.1419,
+    "area_pixel_f1": 0.5815,
+    "wall_pixel_f1": 0.1816
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 170,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0892,
+    "area_pixel_f1": 0.584,
+    "wall_pixel_f1": 0.2282
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 170,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0392,
+    "area_pixel_f1": 0.0986,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_14": {
+   "Kamai": {
+    "object_tp": 281,
+    "object_fp": 1,
+    "object_fn": 27,
+    "object_f1": 0.9525,
+    "area_instance_f1": 0.9174,
+    "area_pixel_f1": 0.9906,
+    "wall_pixel_f1": 0.9155
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 0,
+    "object_fp": 29,
+    "object_fn": 308,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0148,
+    "area_pixel_f1": 0.733,
+    "wall_pixel_f1": 0.2652
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 88,
+    "object_fn": 308,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.0395,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 0,
+    "object_fp": 59,
+    "object_fn": 308,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.1384,
+    "area_pixel_f1": 0.7343,
+    "wall_pixel_f1": 0.1845
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 10,
+    "object_fn": 308,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.8456,
+    "wall_pixel_f1": 0.1246
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 18,
+    "object_fn": 308,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0769,
+    "area_pixel_f1": 0.7543,
+    "wall_pixel_f1": 0.0
+   }
+  },
+  "sheet_15": {
+   "Kamai": {
+    "object_tp": 293,
+    "object_fp": 2,
+    "object_fn": 20,
+    "object_f1": 0.9638,
+    "area_instance_f1": 0.9042,
+    "area_pixel_f1": 0.9933,
+    "wall_pixel_f1": 0.9345
+   },
+   "Gemini 3.7 Flash": {
+    "object_tp": 0,
+    "object_fp": 52,
+    "object_fn": 313,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.8464,
+    "wall_pixel_f1": 0.1424
+   },
+   "Gemini 3.1 Pro": {
+    "object_tp": 0,
+    "object_fp": 123,
+    "object_fn": 313,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0263,
+    "area_pixel_f1": 0.5071,
+    "wall_pixel_f1": 0.0
+   },
+   "Claude Opus 5": {
+    "object_tp": 0,
+    "object_fp": 41,
+    "object_fn": 313,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0874,
+    "area_pixel_f1": 0.8166,
+    "wall_pixel_f1": 0.1387
+   },
+   "Claude Fable 5": {
+    "object_tp": 0,
+    "object_fp": 2,
+    "object_fn": 313,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.0,
+    "area_pixel_f1": 0.8048,
+    "wall_pixel_f1": 0.1226
+   },
+   "GPT-5.6 Sol": {
+    "object_tp": 0,
+    "object_fp": 0,
+    "object_fn": 313,
+    "object_f1": 0.0,
+    "area_instance_f1": 0.039,
+    "area_pixel_f1": 0.6496,
+    "wall_pixel_f1": 0.0
+   }
+  }
+ }
+}

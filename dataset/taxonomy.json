@@ -1,0 +1,52 @@
+{
+ "object_classes": [
+  "Single Swing Door",
+  "Double Swing Door",
+  "Window",
+  "Sink",
+  "Toilet",
+  "Bathtub",
+  "Shower",
+  "Cooktops"
+ ],
+ "area": {
+  "label": "Area",
+  "members": [
+   "Room",
+   "Shaft",
+   "Balcony",
+   "Elevator",
+   "Stairs"
+  ],
+  "note": "touching instances are merged into one polygon per enclosed space"
+ },
+ "wall": {
+  "label": "Wall",
+  "members": [
+   "Wall",
+   "Railing"
+  ]
+ },
+ "matching": {
+  "iou_threshold": 0.5,
+  "assignment": "unique greedy, highest IoU first",
+  "confidence_threshold": null,
+  "note": "object F1 is pooled across sheets, not averaged per sheet",
+  "region_rule": "none \u2014 the whole page is scored and no region is masked out"
+ },
+ "sha256": "e4bdca9f28224b338aae8b6c681960b50e2e2d748df3b37a0265b0e7d76699bc",
+ "sha256_recipe": "SHA-256 of this document with the sha256 and sha256_recipe fields removed, serialised as JSON with sort_keys=True and separators (\",\", \":\")",
+ "notes": "Window is a single class. The annotation source distinguished window subtypes, but those boundaries were not applied consistently, so they are merged here and in scoring.",
+ "not_scored": {
+  "present_in_the_release": {
+   "Sliding Door": "human-annotated, not scored",
+   "Closet Door": "human-annotated, not scored",
+   "Shower Door": "human-annotated, not scored"
+  },
+  "removed_from_the_release": {
+   "Opening": "machine-generated (source=\"auto\"); scoring it would measure agreement with an algorithm rather than with a person",
+   "Floor plan": "marked a scored region in an earlier revision of the protocol; the whole page is now scored",
+   "Legend": "marked a void region in an earlier revision of the protocol; nothing is masked out now"
+  }
+ }
+}
