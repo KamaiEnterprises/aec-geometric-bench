@@ -1,0 +1,7536 @@
+{
+ "_note": "Per-sheet scores for the 15 released sheets under the rules of 23 November 2026 (see scoring/score.py), produced by running that scorer on scoring/predictions/<system>/: ten object classes, objects matched on their real shapes (\"found\" rule), the window rule, the review ledger in annotation_review.json, and the area rule that merges stairs and elevators with the area they touch. object_tp / object_fp / object_fn pool the classes the system supports and include outside_vocabulary_fp. classes gives [tp, fp, fn] per class. wall_pixel and area_pixel are [pixels in both, delivered only, annotation only] at short side 5000; area_instance is [tp, fp, fn]. The figures under \"systems\" are pooled over the 15 sheets, not averaged, and keep six decimals so that they round correctly to three. Corpus figures are pooled over all 312 sheets and are not the mean of these.",
+ "_rules": "AEC-Geometric-Bench-15, rules of 23 November 2026",
+ "_taxonomy_ref": "see taxonomy.json in this directory",
+ "systems": {
+  "Kamai Nov26": {
+   "not_supported": [],
+   "object_tp": 1589,
+   "object_fp": 62,
+   "object_fn": 68,
+   "object_precision": 0.962447,
+   "object_recall": 0.958962,
+   "object_f1": 0.960701,
+   "wall_pixel_f1": 0.947397,
+   "area_pixel_f1": 0.980884,
+   "area_instance_f1": 0.936527,
+   "wall_pixel": [
+    11656187,
+    454705,
+    839688
+   ],
+   "area_pixel": [
+    84686837,
+    2363644,
+    937171
+   ],
+   "area_instance": [
+    782,
+    28,
+    78
+   ],
+   "classes": {
+    "Single Swing Door": [
+     598,
+     20,
+     31
+    ],
+    "Double Swing Door": [
+     49,
+     8,
+     0
+    ],
+    "Window": [
+     462,
+     28,
+     17
+    ],
+    "Sink": [
+     185,
+     2,
+     8
+    ],
+    "Toilet": [
+     105,
+     2,
+     0
+    ],
+    "Bathtub": [
+     71,
+     0,
+     5
+    ],
+    "Shower": [
+     24,
+     2,
+     2
+    ],
+    "Cooktops": [
+     54,
+     0,
+     2
+    ],
+    "Elevator": [
+     5,
+     0,
+     2
+    ],
+    "Stairs": [
+     36,
+     0,
+     1
+    ]
+   }
+  },
+  "Kamai Aug26": {
+   "not_supported": [
+    "Elevator",
+    "Stairs"
+   ],
+   "object_tp": 1508,
+   "object_fp": 89,
+   "object_fn": 105,
+   "object_precision": 0.944271,
+   "object_recall": 0.934904,
+   "object_f1": 0.939564,
+   "wall_pixel_f1": 0.930919,
+   "area_pixel_f1": 0.987483,
+   "area_instance_f1": 0.897806,
+   "wall_pixel": [
+    11353587,
+    542760,
+    1142288
+   ],
+   "area_pixel": [
+    84309289,
+    822687,
+    1314719
+   ],
+   "area_instance": [
+    716,
+    19,
+    144
+   ],
+   "classes": {
+    "Single Swing Door": [
+     584,
+     8,
+     45
+    ],
+    "Double Swing Door": [
+     47,
+     7,
+     2
+    ],
+    "Window": [
+     434,
+     69,
+     45
+    ],
+    "Sink": [
+     188,
+     0,
+     5
+    ],
+    "Toilet": [
+     105,
+     1,
+     0
+    ],
+    "Bathtub": [
+     73,
+     2,
+     3
+    ],
+    "Shower": [
+     21,
+     2,
+     5
+    ],
+    "Cooktops": [
+     56,
+     0,
+     0
+    ],
+    "Elevator": [
+     0,
+     0,
+     7
+    ],
+    "Stairs": [
+     0,
+     0,
+     37
+    ]
+   }
+  },
+  "GPT-6 Astra": {
+   "not_supported": [],
+   "object_tp": 1431,
+   "object_fp": 174,
+   "object_fn": 226,
+   "object_precision": 0.891589,
+   "object_recall": 0.863609,
+   "object_f1": 0.877376,
+   "wall_pixel_f1": 0.836547,
+   "area_pixel_f1": 0.944707,
+   "area_instance_f1": 0.843672,
+   "wall_pixel": [
+    9859279,
+    1216225,
+    2636596
+   ],
+   "area_pixel": [
+    79662725,
+    3363874,
+    5961283
+   ],
+   "area_instance": [
+    680,
+    72,
+    180
+   ],
+   "classes": {
+    "Single Swing Door": [
+     542,
+     22,
+     87
+    ],
+    "Double Swing Door": [
+     22,
+     7,
+     27
+    ],
+    "Window": [
+     406,
+     96,
+     73
+    ],
+    "Sink": [
+     185,
+     13,
+     8
+    ],
+    "Toilet": [
+     103,
+     4,
+     2
+    ],
+    "Bathtub": [
+     62,
+     6,
+     14
+    ],
+    "Shower": [
+     26,
+     10,
+     0
+    ],
+    "Cooktops": [
+     56,
+     2,
+     0
+    ],
+    "Elevator": [
+     6,
+     1,
+     1
+    ],
+    "Stairs": [
+     23,
+     13,
+     14
+    ]
+   }
+  },
+  "GPT-6.1 Sol": {
+   "not_supported": [],
+   "object_tp": 1434,
+   "object_fp": 148,
+   "object_fn": 223,
+   "object_precision": 0.906448,
+   "object_recall": 0.865419,
+   "object_f1": 0.885458,
+   "wall_pixel_f1": 0.824018,
+   "area_pixel_f1": 0.935699,
+   "area_instance_f1": 0.891136,
+   "wall_pixel": [
+    9345018,
+    840703,
+    3150857
+   ],
+   "area_pixel": [
+    77479461,
+    2504128,
+    8144547
+   ],
+   "area_instance": [
+    749,
+    72,
+    111
+   ],
+   "classes": {
+    "Single Swing Door": [
+     567,
+     8,
+     62
+    ],
+    "Double Swing Door": [
+     13,
+     8,
+     36
+    ],
+    "Window": [
+     406,
+     79,
+     73
+    ],
+    "Sink": [
+     183,
+     14,
+     10
+    ],
+    "Toilet": [
+     101,
+     6,
+     4
+    ],
+    "Bathtub": [
+     54,
+     4,
+     22
+    ],
+    "Shower": [
+     26,
+     20,
+     0
+    ],
+    "Cooktops": [
+     55,
+     3,
+     1
+    ],
+    "Elevator": [
+     6,
+     1,
+     1
+    ],
+    "Stairs": [
+     23,
+     5,
+     14
+    ]
+   }
+  },
+  "Claude Opus 5.5": {
+   "not_supported": [],
+   "object_tp": 1468,
+   "object_fp": 160,
+   "object_fn": 189,
+   "object_precision": 0.90172,
+   "object_recall": 0.885938,
+   "object_f1": 0.89376,
+   "wall_pixel_f1": 0.86204,
+   "area_pixel_f1": 0.928233,
+   "area_instance_f1": 0.847478,
+   "wall_pixel": [
+    10124673,
+    869476,
+    2371202
+   ],
+   "area_pixel": [
+    75515663,
+    1568805,
+    10108345
+   ],
+   "area_instance": [
+    689,
+    77,
+    171
+   ],
+   "classes": {
+    "Single Swing Door": [
+     575,
+     10,
+     54
+    ],
+    "Double Swing Door": [
+     26,
+     7,
+     23
+    ],
+    "Window": [
+     392,
+     100,
+     87
+    ],
+    "Sink": [
+     190,
+     27,
+     3
+    ],
+    "Toilet": [
+     105,
+     1,
+     0
+    ],
+    "Bathtub": [
+     69,
+     5,
+     7
+    ],
+    "Shower": [
+     25,
+     6,
+     1
+    ],
+    "Cooktops": [
+     56,
+     0,
+     0
+    ],
+    "Elevator": [
+     6,
+     1,
+     1
+    ],
+    "Stairs": [
+     24,
+     3,
+     13
+    ]
+   }
+  },
+  "Gemini 4 Argon": {
+   "not_supported": [],
+   "object_tp": 539,
+   "object_fp": 922,
+   "object_fn": 1118,
+   "object_precision": 0.368925,
+   "object_recall": 0.325287,
+   "object_f1": 0.345734,
+   "wall_pixel_f1": 0.479785,
+   "area_pixel_f1": 0.879899,
+   "area_instance_f1": 0.484169,
+   "wall_pixel": [
+    6475361,
+    8021552,
+    6020514
+   ],
+   "area_pixel": [
+    72964478,
+    7258999,
+    12659530
+   ],
+   "area_instance": [
+    367,
+    289,
+    493
+   ],
+   "classes": {
+    "Single Swing Door": [
+     159,
+     324,
+     470
+    ],
+    "Double Swing Door": [
+     2,
+     41,
+     47
+    ],
+    "Window": [
+     245,
+     193,
+     234
+    ],
+    "Sink": [
+     33,
+     158,
+     160
+    ],
+    "Toilet": [
+     21,
+     81,
+     84
+    ],
+    "Bathtub": [
+     15,
+     54,
+     61
+    ],
+    "Shower": [
+     14,
+     16,
+     12
+    ],
+    "Cooktops": [
+     27,
+     39,
+     29
+    ],
+    "Elevator": [
+     5,
+     2,
+     2
+    ],
+    "Stairs": [
+     18,
+     14,
+     19
+    ]
+   }
+  }
+ },
+ "sheets": {
+  "sheet_01": {
+   "Kamai Nov26": {
+    "object_tp": 31,
+    "object_fp": 5,
+    "object_fn": 1,
+    "object_f1": 0.9118,
+    "area_instance_f1": 1.0,
+    "area_pixel_f1": 0.9968,
+    "wall_pixel_f1": 0.977,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      4,
+      2,
+      0
+     ],
+     "Window": [
+      5,
+      2,
+      1
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      1,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      3,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     29,
+     0,
+     0
+    ],
+    "area_pixel": [
+     11172855,
+     38053,
+     33250
+    ],
+    "wall_pixel": [
+     1863714,
+     19050,
+     68515
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 29,
+    "object_fp": 8,
+    "object_fn": 0,
+    "object_f1": 0.8788,
+    "area_instance_f1": 0.9474,
+    "area_pixel_f1": 0.994,
+    "wall_pixel_f1": 0.9734,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      4,
+      2,
+      0
+     ],
+     "Window": [
+      6,
+      6,
+      0
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      1,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      3
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     27,
+     1,
+     2
+    ],
+    "area_pixel": [
+     11182348,
+     110665,
+     23757
+    ],
+    "wall_pixel": [
+     1867977,
+     37969,
+     64252
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 29,
+    "object_fp": 9,
+    "object_fn": 3,
+    "object_f1": 0.8286,
+    "area_instance_f1": 0.8,
+    "area_pixel_f1": 0.7894,
+    "wall_pixel_f1": 0.9415,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      4,
+      2,
+      0
+     ],
+     "Window": [
+      5,
+      5,
+      1
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      1,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      1,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     20,
+     1,
+     9
+    ],
+    "area_pixel": [
+     7384412,
+     118216,
+     3821693
+    ],
+    "wall_pixel": [
+     1719635,
+     916,
+     212594
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 30,
+    "object_fp": 8,
+    "object_fn": 2,
+    "object_f1": 0.8571,
+    "area_instance_f1": 0.7843,
+    "area_pixel_f1": 0.7894,
+    "wall_pixel_f1": 0.9274,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      4,
+      2,
+      0
+     ],
+     "Window": [
+      5,
+      5,
+      1
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      1,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     20,
+     2,
+     9
+    ],
+    "area_pixel": [
+     7383821,
+     118204,
+     3822284
+    ],
+    "wall_pixel": [
+     1671744,
+     1202,
+     260485
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 27,
+    "object_fp": 6,
+    "object_fn": 5,
+    "object_f1": 0.8308,
+    "area_instance_f1": 0.8,
+    "area_pixel_f1": 0.7886,
+    "wall_pixel_f1": 0.9076,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      1,
+      0,
+      3
+     ],
+     "Window": [
+      5,
+      5,
+      1
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      1,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     20,
+     1,
+     9
+    ],
+    "area_pixel": [
+     7337371,
+     66301,
+     3868734
+    ],
+    "wall_pixel": [
+     1633207,
+     33553,
+     299022
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 11,
+    "object_fp": 26,
+    "object_fn": 21,
+    "object_f1": 0.3188,
+    "area_instance_f1": 0.5882,
+    "area_pixel_f1": 0.7566,
+    "wall_pixel_f1": 0.5556,
+    "classes": {
+     "Single Swing Door": [
+      5,
+      12,
+      8
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      4
+     ],
+     "Window": [
+      5,
+      5,
+      1
+     ],
+     "Sink": [
+      0,
+      3,
+      2
+     ],
+     "Toilet": [
+      0,
+      2,
+      2
+     ],
+     "Bathtub": [
+      0,
+      2,
+      1
+     ],
+     "Shower": [
+      0,
+      0,
+      1
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      1,
+      0
+     ],
+     "Stairs": [
+      1,
+      1,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     15,
+     7,
+     14
+    ],
+    "area_pixel": [
+     7035607,
+     356927,
+     4170498
+    ],
+    "wall_pixel": [
+     983469,
+     624435,
+     948760
+    ]
+   }
+  },
+  "sheet_02": {
+   "Kamai Nov26": {
+    "object_tp": 39,
+    "object_fp": 1,
+    "object_fn": 0,
+    "object_f1": 0.9873,
+    "area_instance_f1": 1.0,
+    "area_pixel_f1": 0.9896,
+    "wall_pixel_f1": 0.9396,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      13,
+      1,
+      0
+     ],
+     "Sink": [
+      4,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     22,
+     0,
+     0
+    ],
+    "area_pixel": [
+     498623,
+     9014,
+     1436
+    ],
+    "wall_pixel": [
+     84979,
+     2268,
+     8653
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 37,
+    "object_fp": 1,
+    "object_fn": 0,
+    "object_f1": 0.9867,
+    "area_instance_f1": 0.9767,
+    "area_pixel_f1": 0.9855,
+    "wall_pixel_f1": 0.9178,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      13,
+      1,
+      0
+     ],
+     "Sink": [
+      4,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     21,
+     0,
+     1
+    ],
+    "area_pixel": [
+     496064,
+     10568,
+     3995
+    ],
+    "wall_pixel": [
+     82299,
+     3418,
+     11333
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 39,
+    "object_fp": 3,
+    "object_fn": 0,
+    "object_f1": 0.963,
+    "area_instance_f1": 0.9565,
+    "area_pixel_f1": 0.9823,
+    "wall_pixel_f1": 0.9082,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      13,
+      1,
+      0
+     ],
+     "Sink": [
+      4,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      2,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     22,
+     2,
+     0
+    ],
+    "area_pixel": [
+     495649,
+     13436,
+     4410
+    ],
+    "wall_pixel": [
+     78895,
+     1211,
+     14737
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 39,
+    "object_fp": 3,
+    "object_fn": 0,
+    "object_f1": 0.963,
+    "area_instance_f1": 0.9565,
+    "area_pixel_f1": 0.9849,
+    "wall_pixel_f1": 0.9055,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      13,
+      1,
+      0
+     ],
+     "Sink": [
+      4,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      2,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     22,
+     2,
+     0
+    ],
+    "area_pixel": [
+     497695,
+     12903,
+     2364
+    ],
+    "wall_pixel": [
+     78466,
+     1207,
+     15166
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 39,
+    "object_fp": 1,
+    "object_fn": 0,
+    "object_f1": 0.9873,
+    "area_instance_f1": 0.9565,
+    "area_pixel_f1": 0.9823,
+    "wall_pixel_f1": 0.8842,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      13,
+      1,
+      0
+     ],
+     "Sink": [
+      4,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     22,
+     2,
+     0
+    ],
+    "area_pixel": [
+     496799,
+     14637,
+     3260
+    ],
+    "wall_pixel": [
+     75970,
+     2229,
+     17662
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 12,
+    "object_fp": 16,
+    "object_fn": 27,
+    "object_f1": 0.3582,
+    "area_instance_f1": 0.8,
+    "area_pixel_f1": 0.9053,
+    "wall_pixel_f1": 0.6404,
+    "classes": {
+     "Single Swing Door": [
+      5,
+      5,
+      11
+     ],
+     "Double Swing Door": [
+      0,
+      2,
+      0
+     ],
+     "Window": [
+      2,
+      6,
+      11
+     ],
+     "Sink": [
+      0,
+      2,
+      4
+     ],
+     "Toilet": [
+      1,
+      1,
+      1
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     20,
+     8,
+     2
+    ],
+    "area_pixel": [
+     471401,
+     69939,
+     28658
+    ],
+    "wall_pixel": [
+     70689,
+     56445,
+     22943
+    ]
+   }
+  },
+  "sheet_03": {
+   "Kamai Nov26": {
+    "object_tp": 38,
+    "object_fp": 3,
+    "object_fn": 3,
+    "object_f1": 0.9268,
+    "area_instance_f1": 0.8,
+    "area_pixel_f1": 0.8802,
+    "wall_pixel_f1": 0.9533,
+    "classes": {
+     "Single Swing Door": [
+      11,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      2,
+      0,
+      0
+     ],
+     "Window": [
+      16,
+      0,
+      0
+     ],
+     "Sink": [
+      2,
+      2,
+      2
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 1,
+    "area_instance": [
+     16,
+     0,
+     8
+    ],
+    "area_pixel": [
+     1268215,
+     10442,
+     334620
+    ],
+    "wall_pixel": [
+     182880,
+     6377,
+     11552
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 39,
+    "object_fp": 1,
+    "object_fn": 0,
+    "object_f1": 0.9873,
+    "area_instance_f1": 0.9333,
+    "area_pixel_f1": 0.9861,
+    "wall_pixel_f1": 0.8852,
+    "classes": {
+     "Single Swing Door": [
+      11,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      2,
+      0,
+      0
+     ],
+     "Window": [
+      16,
+      1,
+      0
+     ],
+     "Sink": [
+      4,
+      0,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     21,
+     0,
+     3
+    ],
+    "area_pixel": [
+     1573633,
+     15131,
+     29202
+    ],
+    "wall_pixel": [
+     161799,
+     9321,
+     32633
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 39,
+    "object_fp": 5,
+    "object_fn": 2,
+    "object_f1": 0.9176,
+    "area_instance_f1": 0.8182,
+    "area_pixel_f1": 0.9642,
+    "wall_pixel_f1": 0.8804,
+    "classes": {
+     "Single Swing Door": [
+      11,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      2
+     ],
+     "Window": [
+      16,
+      2,
+      0
+     ],
+     "Sink": [
+      4,
+      2,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     18,
+     2,
+     6
+    ],
+    "area_pixel": [
+     1523790,
+     34093,
+     79045
+    ],
+    "wall_pixel": [
+     153165,
+     351,
+     41267
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 41,
+    "object_fp": 3,
+    "object_fn": 0,
+    "object_f1": 0.9647,
+    "area_instance_f1": 0.7619,
+    "area_pixel_f1": 0.8758,
+    "wall_pixel_f1": 0.8732,
+    "classes": {
+     "Single Swing Door": [
+      11,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      2,
+      0,
+      0
+     ],
+     "Window": [
+      16,
+      0,
+      0
+     ],
+     "Sink": [
+      4,
+      2,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     16,
+     2,
+     8
+    ],
+    "area_pixel": [
+     1273029,
+     31303,
+     329806
+    ],
+    "wall_pixel": [
+     150987,
+     407,
+     43445
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 37,
+    "object_fp": 3,
+    "object_fn": 4,
+    "object_f1": 0.9136,
+    "area_instance_f1": 0.7826,
+    "area_pixel_f1": 0.9648,
+    "wall_pixel_f1": 0.8785,
+    "classes": {
+     "Single Swing Door": [
+      11,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      2,
+      0,
+      0
+     ],
+     "Window": [
+      12,
+      0,
+      4
+     ],
+     "Sink": [
+      4,
+      2,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     18,
+     4,
+     6
+    ],
+    "area_pixel": [
+     1521303,
+     29323,
+     81532
+    ],
+    "wall_pixel": [
+     152318,
+     0,
+     42114
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 32,
+    "object_fp": 6,
+    "object_fn": 9,
+    "object_f1": 0.8101,
+    "area_instance_f1": 0.7273,
+    "area_pixel_f1": 0.9316,
+    "wall_pixel_f1": 0.5471,
+    "classes": {
+     "Single Swing Door": [
+      8,
+      4,
+      3
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      2
+     ],
+     "Window": [
+      12,
+      0,
+      4
+     ],
+     "Sink": [
+      4,
+      2,
+      0
+     ],
+     "Toilet": [
+      2,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     16,
+     4,
+     8
+    ],
+    "area_pixel": [
+     1450529,
+     60661,
+     152306
+    ],
+    "wall_pixel": [
+     97955,
+     65691,
+     96477
+    ]
+   }
+  },
+  "sheet_04": {
+   "Kamai Nov26": {
+    "object_tp": 40,
+    "object_fp": 3,
+    "object_fn": 8,
+    "object_f1": 0.8791,
+    "area_instance_f1": 0.5882,
+    "area_pixel_f1": 0.9574,
+    "wall_pixel_f1": 0.8617,
+    "classes": {
+     "Single Swing Door": [
+      0,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      40,
+      2,
+      6
+     ],
+     "Sink": [
+      0,
+      0,
+      0
+     ],
+     "Toilet": [
+      0,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      2
+     ],
+     "Stairs": [
+      0,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 1,
+    "area_instance": [
+     15,
+     9,
+     12
+    ],
+    "area_pixel": [
+     3939734,
+     286113,
+     64688
+    ],
+    "wall_pixel": [
+     561522,
+     53786,
+     126440
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 45,
+    "object_fp": 8,
+    "object_fn": 1,
+    "object_f1": 0.9091,
+    "area_instance_f1": 0.8679,
+    "area_pixel_f1": 0.9929,
+    "wall_pixel_f1": 0.9517,
+    "classes": {
+     "Single Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      45,
+      8,
+      1
+     ],
+     "Sink": [
+      0,
+      0,
+      0
+     ],
+     "Toilet": [
+      0,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      2
+     ],
+     "Stairs": [
+      0,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     23,
+     3,
+     4
+    ],
+    "area_pixel": [
+     3972842,
+     24876,
+     31580
+    ],
+    "wall_pixel": [
+     655810,
+     34370,
+     32152
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 33,
+    "object_fp": 5,
+    "object_fn": 15,
+    "object_f1": 0.7674,
+    "area_instance_f1": 0.6182,
+    "area_pixel_f1": 0.9594,
+    "wall_pixel_f1": 0.7348,
+    "classes": {
+     "Single Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      32,
+      4,
+      14
+     ],
+     "Sink": [
+      0,
+      1,
+      0
+     ],
+     "Toilet": [
+      0,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      1,
+      0,
+      1
+     ],
+     "Stairs": [
+      0,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     17,
+     11,
+     10
+    ],
+    "area_pixel": [
+     3909654,
+     236022,
+     94768
+    ],
+    "wall_pixel": [
+     430172,
+     52687,
+     257790
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 33,
+    "object_fp": 1,
+    "object_fn": 15,
+    "object_f1": 0.8049,
+    "area_instance_f1": 0.4615,
+    "area_pixel_f1": 0.9414,
+    "wall_pixel_f1": 0.658,
+    "classes": {
+     "Single Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      32,
+      0,
+      14
+     ],
+     "Sink": [
+      0,
+      1,
+      0
+     ],
+     "Toilet": [
+      0,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      1,
+      0,
+      1
+     ],
+     "Stairs": [
+      0,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 1,
+    "area_instance": [
+     12,
+     13,
+     15
+    ],
+    "area_pixel": [
+     3792397,
+     259869,
+     212025
+    ],
+    "wall_pixel": [
+     360476,
+     47297,
+     327486
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 32,
+    "object_fp": 5,
+    "object_fn": 16,
+    "object_f1": 0.7529,
+    "area_instance_f1": 0.4,
+    "area_pixel_f1": 0.9141,
+    "wall_pixel_f1": 0.7124,
+    "classes": {
+     "Single Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      31,
+      4,
+      15
+     ],
+     "Sink": [
+      0,
+      0,
+      0
+     ],
+     "Toilet": [
+      0,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      1,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      1,
+      0,
+      1
+     ],
+     "Stairs": [
+      0,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     12,
+     21,
+     15
+    ],
+    "area_pixel": [
+     3471612,
+     119512,
+     532810
+    ],
+    "wall_pixel": [
+     427393,
+     84576,
+     260569
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 17,
+    "object_fp": 12,
+    "object_fn": 31,
+    "object_f1": 0.4416,
+    "area_instance_f1": 0.375,
+    "area_pixel_f1": 0.8928,
+    "wall_pixel_f1": 0.3708,
+    "classes": {
+     "Single Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      17,
+      10,
+      29
+     ],
+     "Sink": [
+      0,
+      0,
+      0
+     ],
+     "Toilet": [
+      0,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      2
+     ],
+     "Stairs": [
+      0,
+      2,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     12,
+     25,
+     15
+    ],
+    "area_pixel": [
+     3489366,
+     322635,
+     515056
+    ],
+    "wall_pixel": [
+     267846,
+     488929,
+     420116
+    ]
+   }
+  },
+  "sheet_05": {
+   "Kamai Nov26": {
+    "object_tp": 43,
+    "object_fp": 4,
+    "object_fn": 6,
+    "object_f1": 0.8958,
+    "area_instance_f1": 0.9474,
+    "area_pixel_f1": 0.9934,
+    "wall_pixel_f1": 0.952,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      1,
+      0
+     ],
+     "Double Swing Door": [
+      2,
+      1,
+      0
+     ],
+     "Window": [
+      16,
+      0,
+      0
+     ],
+     "Sink": [
+      2,
+      0,
+      4
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      2
+     ],
+     "Shower": [
+      0,
+      2,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     18,
+     2,
+     0
+    ],
+    "area_pixel": [
+     4625298,
+     10350,
+     50716
+    ],
+    "wall_pixel": [
+     520680,
+     41861,
+     10610
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 39,
+    "object_fp": 5,
+    "object_fn": 8,
+    "object_f1": 0.8571,
+    "area_instance_f1": 0.9474,
+    "area_pixel_f1": 0.9927,
+    "wall_pixel_f1": 0.9557,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      1,
+      2
+     ],
+     "Window": [
+      16,
+      2,
+      0
+     ],
+     "Sink": [
+      2,
+      0,
+      4
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      2
+     ],
+     "Shower": [
+      0,
+      2,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     18,
+     2,
+     0
+    ],
+    "area_pixel": [
+     4619830,
+     12022,
+     56184
+    ],
+    "wall_pixel": [
+     517590,
+     34340,
+     13700
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 43,
+    "object_fp": 6,
+    "object_fn": 6,
+    "object_f1": 0.8776,
+    "area_instance_f1": 0.9474,
+    "area_pixel_f1": 0.9893,
+    "wall_pixel_f1": 0.8811,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      2
+     ],
+     "Window": [
+      14,
+      4,
+      2
+     ],
+     "Sink": [
+      6,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      2
+     ],
+     "Shower": [
+      0,
+      2,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     18,
+     2,
+     0
+    ],
+    "area_pixel": [
+     4638048,
+     62537,
+     37966
+    ],
+    "wall_pixel": [
+     478788,
+     76681,
+     52502
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 42,
+    "object_fp": 6,
+    "object_fn": 7,
+    "object_f1": 0.866,
+    "area_instance_f1": 0.9,
+    "area_pixel_f1": 0.9886,
+    "wall_pixel_f1": 0.9207,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      2
+     ],
+     "Window": [
+      14,
+      4,
+      2
+     ],
+     "Sink": [
+      6,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      2
+     ],
+     "Shower": [
+      0,
+      2,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     18,
+     4,
+     0
+    ],
+    "area_pixel": [
+     4622965,
+     53770,
+     53049
+    ],
+    "wall_pixel": [
+     486793,
+     39308,
+     44497
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 43,
+    "object_fp": 6,
+    "object_fn": 6,
+    "object_f1": 0.8776,
+    "area_instance_f1": 0.9,
+    "area_pixel_f1": 0.9845,
+    "wall_pixel_f1": 0.9399,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      2
+     ],
+     "Window": [
+      14,
+      4,
+      2
+     ],
+     "Sink": [
+      6,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      2
+     ],
+     "Shower": [
+      0,
+      2,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     18,
+     4,
+     0
+    ],
+    "area_pixel": [
+     4588457,
+     56656,
+     87557
+    ],
+    "wall_pixel": [
+     491912,
+     23482,
+     39378
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 28,
+    "object_fp": 26,
+    "object_fn": 21,
+    "object_f1": 0.5437,
+    "area_instance_f1": 0.7317,
+    "area_pixel_f1": 0.9162,
+    "wall_pixel_f1": 0.418,
+    "classes": {
+     "Single Swing Door": [
+      6,
+      12,
+      7
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      2
+     ],
+     "Window": [
+      9,
+      10,
+      7
+     ],
+     "Sink": [
+      4,
+      2,
+      2
+     ],
+     "Toilet": [
+      3,
+      1,
+      1
+     ],
+     "Bathtub": [
+      3,
+      1,
+      1
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     15,
+     8,
+     3
+    ],
+    "area_pixel": [
+     4399296,
+     528269,
+     276718
+    ],
+    "wall_pixel": [
+     268942,
+     486473,
+     262348
+    ]
+   }
+  },
+  "sheet_06": {
+   "Kamai Nov26": {
+    "object_tp": 46,
+    "object_fp": 0,
+    "object_fn": 1,
+    "object_f1": 0.9892,
+    "area_instance_f1": 0.96,
+    "area_pixel_f1": 0.9914,
+    "wall_pixel_f1": 0.9587,
+    "classes": {
+     "Single Swing Door": [
+      12,
+      0,
+      1
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      16,
+      0,
+      0
+     ],
+     "Sink": [
+      8,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      3,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     24,
+     2,
+     0
+    ],
+    "area_pixel": [
+     5911172,
+     85801,
+     16517
+    ],
+    "wall_pixel": [
+     526429,
+     15770,
+     29562
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 28,
+    "object_fp": 3,
+    "object_fn": 17,
+    "object_f1": 0.7368,
+    "area_instance_f1": 0.9583,
+    "area_pixel_f1": 0.9909,
+    "wall_pixel_f1": 0.9056,
+    "classes": {
+     "Single Swing Door": [
+      12,
+      0,
+      1
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      0,
+      3,
+      16
+     ],
+     "Sink": [
+      8,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      3,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     23,
+     1,
+     1
+    ],
+    "area_pixel": [
+     5910970,
+     92323,
+     16719
+    ],
+    "wall_pixel": [
+     495577,
+     42848,
+     60414
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 39,
+    "object_fp": 4,
+    "object_fn": 8,
+    "object_f1": 0.8667,
+    "area_instance_f1": 0.9167,
+    "area_pixel_f1": 0.9727,
+    "wall_pixel_f1": 0.9036,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      10,
+      2,
+      6
+     ],
+     "Sink": [
+      7,
+      1,
+      1
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      1,
+      0
+     ],
+     "Shower": [
+      3,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     22,
+     2,
+     2
+    ],
+    "area_pixel": [
+     5723798,
+     116822,
+     203891
+    ],
+    "wall_pixel": [
+     478776,
+     24936,
+     77215
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 39,
+    "object_fp": 2,
+    "object_fn": 8,
+    "object_f1": 0.8864,
+    "area_instance_f1": 0.9167,
+    "area_pixel_f1": 0.9682,
+    "wall_pixel_f1": 0.9167,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      10,
+      0,
+      6
+     ],
+     "Sink": [
+      7,
+      1,
+      1
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      1,
+      0
+     ],
+     "Shower": [
+      3,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     22,
+     2,
+     2
+    ],
+    "area_pixel": [
+     5673575,
+     118529,
+     254114
+    ],
+    "wall_pixel": [
+     487105,
+     19588,
+     68886
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 44,
+    "object_fp": 1,
+    "object_fn": 3,
+    "object_f1": 0.9565,
+    "area_instance_f1": 0.875,
+    "area_pixel_f1": 0.8968,
+    "wall_pixel_f1": 0.8555,
+    "classes": {
+     "Single Swing Door": [
+      13,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      15,
+      0,
+      1
+     ],
+     "Sink": [
+      7,
+      0,
+      1
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      1,
+      0
+     ],
+     "Shower": [
+      3,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     21,
+     3,
+     3
+    ],
+    "area_pixel": [
+     4904231,
+     105251,
+     1023458
+    ],
+    "wall_pixel": [
+     431201,
+     20817,
+     124790
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 34,
+    "object_fp": 9,
+    "object_fn": 13,
+    "object_f1": 0.7556,
+    "area_instance_f1": 0.5417,
+    "area_pixel_f1": 0.8715,
+    "wall_pixel_f1": 0.6065,
+    "classes": {
+     "Single Swing Door": [
+      5,
+      6,
+      8
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      15,
+      0,
+      1
+     ],
+     "Sink": [
+      7,
+      1,
+      1
+     ],
+     "Toilet": [
+      3,
+      1,
+      1
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      1,
+      1
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     13,
+     11,
+     11
+    ],
+    "area_pixel": [
+     4740442,
+     210312,
+     1187247
+    ],
+    "wall_pixel": [
+     364276,
+     281024,
+     191715
+    ]
+   }
+  },
+  "sheet_07": {
+   "Kamai Nov26": {
+    "object_tp": 53,
+    "object_fp": 5,
+    "object_fn": 8,
+    "object_f1": 0.8908,
+    "area_instance_f1": 0.9655,
+    "area_pixel_f1": 0.9037,
+    "wall_pixel_f1": 0.9265,
+    "classes": {
+     "Single Swing Door": [
+      6,
+      0,
+      6
+     ],
+     "Double Swing Door": [
+      1,
+      3,
+      0
+     ],
+     "Window": [
+      40,
+      2,
+      2
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      1,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      1,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     14,
+     0,
+     1
+    ],
+    "area_pixel": [
+     4521869,
+     943774,
+     19943
+    ],
+    "wall_pixel": [
+     550542,
+     58141,
+     29262
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 46,
+    "object_fp": 9,
+    "object_fn": 14,
+    "object_f1": 0.8,
+    "area_instance_f1": 0.9655,
+    "area_pixel_f1": 0.995,
+    "wall_pixel_f1": 0.9665,
+    "classes": {
+     "Single Swing Door": [
+      9,
+      1,
+      3
+     ],
+     "Double Swing Door": [
+      1,
+      2,
+      0
+     ],
+     "Window": [
+      31,
+      6,
+      11
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      1,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      1,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     14,
+     0,
+     1
+    ],
+    "area_pixel": [
+     4527291,
+     30964,
+     14521
+    ],
+    "wall_pixel": [
+     555364,
+     14061,
+     24440
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 53,
+    "object_fp": 15,
+    "object_fn": 8,
+    "object_f1": 0.8217,
+    "area_instance_f1": 0.75,
+    "area_pixel_f1": 0.9778,
+    "wall_pixel_f1": 0.8954,
+    "classes": {
+     "Single Swing Door": [
+      9,
+      1,
+      3
+     ],
+     "Double Swing Door": [
+      1,
+      3,
+      0
+     ],
+     "Window": [
+      37,
+      9,
+      5
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      1,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      1,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      2,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     12,
+     5,
+     3
+    ],
+    "area_pixel": [
+     4482228,
+     143921,
+     59584
+    ],
+    "wall_pixel": [
+     533353,
+     78153,
+     46451
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 53,
+    "object_fp": 14,
+    "object_fn": 8,
+    "object_f1": 0.8281,
+    "area_instance_f1": 0.8125,
+    "area_pixel_f1": 0.985,
+    "wall_pixel_f1": 0.902,
+    "classes": {
+     "Single Swing Door": [
+      8,
+      1,
+      4
+     ],
+     "Double Swing Door": [
+      1,
+      3,
+      0
+     ],
+     "Window": [
+      38,
+      8,
+      4
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      1,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      1,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      2,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     13,
+     4,
+     2
+    ],
+    "area_pixel": [
+     4502537,
+     97536,
+     39275
+    ],
+    "wall_pixel": [
+     525078,
+     59423,
+     54726
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 52,
+    "object_fp": 12,
+    "object_fn": 9,
+    "object_f1": 0.832,
+    "area_instance_f1": 0.56,
+    "area_pixel_f1": 0.9828,
+    "wall_pixel_f1": 0.9118,
+    "classes": {
+     "Single Swing Door": [
+      8,
+      3,
+      4
+     ],
+     "Double Swing Door": [
+      0,
+      2,
+      1
+     ],
+     "Window": [
+      38,
+      7,
+      4
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      1,
+      0,
+      0
+     ],
+     "Bathtub": [
+      1,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      1,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     7,
+     3,
+     8
+    ],
+    "area_pixel": [
+     4434485,
+     47942,
+     107327
+    ],
+    "wall_pixel": [
+     486925,
+     1363,
+     92879
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 33,
+    "object_fp": 28,
+    "object_fn": 28,
+    "object_f1": 0.541,
+    "area_instance_f1": 0.5185,
+    "area_pixel_f1": 0.9243,
+    "wall_pixel_f1": 0.6271,
+    "classes": {
+     "Single Swing Door": [
+      2,
+      12,
+      10
+     ],
+     "Double Swing Door": [
+      0,
+      6,
+      1
+     ],
+     "Window": [
+      27,
+      7,
+      15
+     ],
+     "Sink": [
+      2,
+      0,
+      0
+     ],
+     "Toilet": [
+      1,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      1,
+      1
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      1
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      2,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     7,
+     5,
+     8
+    ],
+    "area_pixel": [
+     4272607,
+     430259,
+     269205
+    ],
+    "wall_pixel": [
+     427450,
+     355933,
+     152354
+    ]
+   }
+  },
+  "sheet_08": {
+   "Kamai Nov26": {
+    "object_tp": 84,
+    "object_fp": 1,
+    "object_fn": 0,
+    "object_f1": 0.9941,
+    "area_instance_f1": 1.0,
+    "area_pixel_f1": 0.9963,
+    "wall_pixel_f1": 0.9592,
+    "classes": {
+     "Single Swing Door": [
+      26,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      28,
+      1,
+      0
+     ],
+     "Sink": [
+      10,
+      0,
+      0
+     ],
+     "Toilet": [
+      6,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      8,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     30,
+     0,
+     0
+    ],
+    "area_pixel": [
+     8160670,
+     29221,
+     32139
+    ],
+    "wall_pixel": [
+     1052991,
+     28524,
+     60996
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 76,
+    "object_fp": 0,
+    "object_fn": 0,
+    "object_f1": 1.0,
+    "area_instance_f1": 1.0,
+    "area_pixel_f1": 0.9948,
+    "wall_pixel_f1": 0.8769,
+    "classes": {
+     "Single Swing Door": [
+      26,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      28,
+      0,
+      0
+     ],
+     "Sink": [
+      10,
+      0,
+      0
+     ],
+     "Toilet": [
+      6,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      8
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     30,
+     0,
+     0
+    ],
+    "area_pixel": [
+     8153859,
+     46835,
+     38950
+    ],
+    "wall_pixel": [
+     901311,
+     40298,
+     212676
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 80,
+    "object_fp": 2,
+    "object_fn": 4,
+    "object_f1": 0.9639,
+    "area_instance_f1": 0.9677,
+    "area_pixel_f1": 0.9891,
+    "wall_pixel_f1": 0.8863,
+    "classes": {
+     "Single Swing Door": [
+      26,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      28,
+      2,
+      0
+     ],
+     "Sink": [
+      10,
+      0,
+      0
+     ],
+     "Toilet": [
+      6,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      4,
+      0,
+      4
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     30,
+     2,
+     0
+    ],
+    "area_pixel": [
+     8166616,
+     154514,
+     26193
+    ],
+    "wall_pixel": [
+     914179,
+     34770,
+     199808
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 80,
+    "object_fp": 2,
+    "object_fn": 4,
+    "object_f1": 0.9639,
+    "area_instance_f1": 0.9677,
+    "area_pixel_f1": 0.9882,
+    "wall_pixel_f1": 0.8864,
+    "classes": {
+     "Single Swing Door": [
+      26,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      28,
+      2,
+      0
+     ],
+     "Sink": [
+      10,
+      0,
+      0
+     ],
+     "Toilet": [
+      6,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      4,
+      0,
+      4
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     30,
+     2,
+     0
+    ],
+    "area_pixel": [
+     8167361,
+     169375,
+     25448
+    ],
+    "wall_pixel": [
+     912702,
+     32696,
+     201285
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 80,
+    "object_fp": 2,
+    "object_fn": 4,
+    "object_f1": 0.9639,
+    "area_instance_f1": 0.875,
+    "area_pixel_f1": 0.9881,
+    "wall_pixel_f1": 0.9399,
+    "classes": {
+     "Single Swing Door": [
+      26,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      28,
+      2,
+      0
+     ],
+     "Sink": [
+      10,
+      0,
+      0
+     ],
+     "Toilet": [
+      6,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      4,
+      0,
+      4
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     28,
+     6,
+     2
+    ],
+    "area_pixel": [
+     8077933,
+     80084,
+     114876
+    ],
+    "wall_pixel": [
+     1081059,
+     105245,
+     32928
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 58,
+    "object_fp": 24,
+    "object_fn": 26,
+    "object_f1": 0.6988,
+    "area_instance_f1": 0.8667,
+    "area_pixel_f1": 0.9651,
+    "wall_pixel_f1": 0.6716,
+    "classes": {
+     "Single Swing Door": [
+      18,
+      8,
+      8
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      26,
+      4,
+      2
+     ],
+     "Sink": [
+      6,
+      4,
+      4
+     ],
+     "Toilet": [
+      0,
+      6,
+      6
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      2,
+      6
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     26,
+     4,
+     4
+    ],
+    "area_pixel": [
+     7944430,
+     325805,
+     248379
+    ],
+    "wall_pixel": [
+     724600,
+     319217,
+     389387
+    ]
+   }
+  },
+  "sheet_09": {
+   "Kamai Nov26": {
+    "object_tp": 70,
+    "object_fp": 9,
+    "object_fn": 5,
+    "object_f1": 0.9091,
+    "area_instance_f1": 0.75,
+    "area_pixel_f1": 0.9875,
+    "wall_pixel_f1": 0.9016,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      5,
+      0
+     ],
+     "Double Swing Door": [
+      4,
+      0,
+      0
+     ],
+     "Window": [
+      35,
+      4,
+      1
+     ],
+     "Sink": [
+      8,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      1,
+      0,
+      2
+     ],
+     "Cooktops": [
+      0,
+      0,
+      2
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     27,
+     6,
+     12
+    ],
+    "area_pixel": [
+     9166054,
+     131531,
+     100522
+    ],
+    "wall_pixel": [
+     945569,
+     58229,
+     148179
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 68,
+    "object_fp": 12,
+    "object_fn": 5,
+    "object_f1": 0.8889,
+    "area_instance_f1": 0.6769,
+    "area_pixel_f1": 0.9654,
+    "wall_pixel_f1": 0.9017,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      3,
+      0
+     ],
+     "Double Swing Door": [
+      4,
+      0,
+      0
+     ],
+     "Window": [
+      34,
+      9,
+      2
+     ],
+     "Sink": [
+      8,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      3
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     22,
+     4,
+     17
+    ],
+    "area_pixel": [
+     8734435,
+     94791,
+     532141
+    ],
+    "wall_pixel": [
+     946105,
+     58692,
+     147643
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 68,
+    "object_fp": 26,
+    "object_fn": 7,
+    "object_f1": 0.8047,
+    "area_instance_f1": 0.8312,
+    "area_pixel_f1": 0.9503,
+    "wall_pixel_f1": 0.7021,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      5,
+      0
+     ],
+     "Double Swing Door": [
+      3,
+      0,
+      1
+     ],
+     "Window": [
+      31,
+      12,
+      5
+     ],
+     "Sink": [
+      8,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      2,
+      0
+     ],
+     "Shower": [
+      3,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      1,
+      0
+     ],
+     "Stairs": [
+      1,
+      6,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     32,
+     6,
+     7
+    ],
+    "area_pixel": [
+     9084252,
+     767610,
+     182324
+    ],
+    "wall_pixel": [
+     618528,
+     49736,
+     475220
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 69,
+    "object_fp": 18,
+    "object_fn": 6,
+    "object_f1": 0.8519,
+    "area_instance_f1": 0.7826,
+    "area_pixel_f1": 0.8727,
+    "wall_pixel_f1": 0.7038,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      3,
+      0
+     ],
+     "Double Swing Door": [
+      4,
+      0,
+      0
+     ],
+     "Window": [
+      31,
+      12,
+      5
+     ],
+     "Sink": [
+      8,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      2,
+      0
+     ],
+     "Shower": [
+      3,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      1,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     27,
+     3,
+     12
+    ],
+    "area_pixel": [
+     7264886,
+     117196,
+     2001690
+    ],
+    "wall_pixel": [
+     618592,
+     45626,
+     475156
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 71,
+    "object_fp": 17,
+    "object_fn": 4,
+    "object_f1": 0.8712,
+    "area_instance_f1": 0.8116,
+    "area_pixel_f1": 0.873,
+    "wall_pixel_f1": 0.7633,
+    "classes": {
+     "Single Swing Door": [
+      16,
+      3,
+      0
+     ],
+     "Double Swing Door": [
+      4,
+      0,
+      0
+     ],
+     "Window": [
+      33,
+      11,
+      3
+     ],
+     "Sink": [
+      8,
+      0,
+      0
+     ],
+     "Toilet": [
+      4,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      2,
+      0
+     ],
+     "Shower": [
+      3,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      1,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     28,
+     2,
+     11
+    ],
+    "area_pixel": [
+     7262698,
+     108649,
+     2003878
+    ],
+    "wall_pixel": [
+     731031,
+     90635,
+     362717
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 19,
+    "object_fp": 86,
+    "object_fn": 56,
+    "object_f1": 0.2111,
+    "area_instance_f1": 0.3544,
+    "area_pixel_f1": 0.8496,
+    "wall_pixel_f1": 0.2509,
+    "classes": {
+     "Single Swing Door": [
+      3,
+      25,
+      13
+     ],
+     "Double Swing Door": [
+      0,
+      3,
+      4
+     ],
+     "Window": [
+      13,
+      34,
+      23
+     ],
+     "Sink": [
+      0,
+      11,
+      8
+     ],
+     "Toilet": [
+      0,
+      5,
+      4
+     ],
+     "Bathtub": [
+      0,
+      2,
+      0
+     ],
+     "Shower": [
+      2,
+      1,
+      1
+     ],
+     "Cooktops": [
+      0,
+      2,
+      2
+     ],
+     "Elevator": [
+      0,
+      1,
+      0
+     ],
+     "Stairs": [
+      1,
+      2,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     14,
+     26,
+     25
+    ],
+    "area_pixel": [
+     7747786,
+     1223956,
+     1518790
+    ],
+    "wall_pixel": [
+     290052,
+     928265,
+     803696
+    ]
+   }
+  },
+  "sheet_10": {
+   "Kamai Nov26": {
+    "object_tp": 89,
+    "object_fp": 2,
+    "object_fn": 1,
+    "object_f1": 0.9834,
+    "area_instance_f1": 0.9709,
+    "area_pixel_f1": 0.9902,
+    "wall_pixel_f1": 0.9776,
+    "classes": {
+     "Single Swing Door": [
+      40,
+      1,
+      1
+     ],
+     "Double Swing Door": [
+      0,
+      1,
+      0
+     ],
+     "Window": [
+      16,
+      0,
+      0
+     ],
+     "Sink": [
+      13,
+      0,
+      0
+     ],
+     "Toilet": [
+      7,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      6,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      3,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     50,
+     0,
+     3
+    ],
+    "area_pixel": [
+     7042921,
+     106330,
+     32973
+    ],
+    "wall_pixel": [
+     1082841,
+     22826,
+     26723
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 86,
+    "object_fp": 1,
+    "object_fn": 1,
+    "object_f1": 0.9885,
+    "area_instance_f1": 0.972,
+    "area_pixel_f1": 0.9875,
+    "wall_pixel_f1": 0.9587,
+    "classes": {
+     "Single Swing Door": [
+      40,
+      0,
+      1
+     ],
+     "Double Swing Door": [
+      0,
+      1,
+      0
+     ],
+     "Window": [
+      16,
+      0,
+      0
+     ],
+     "Sink": [
+      13,
+      0,
+      0
+     ],
+     "Toilet": [
+      7,
+      0,
+      0
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      6,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      3
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     52,
+     2,
+     1
+    ],
+    "area_pixel": [
+     7042401,
+     144777,
+     33493
+    ],
+    "wall_pixel": [
+     1066457,
+     48869,
+     43107
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 84,
+    "object_fp": 6,
+    "object_fn": 6,
+    "object_f1": 0.9333,
+    "area_instance_f1": 0.7527,
+    "area_pixel_f1": 0.9525,
+    "wall_pixel_f1": 0.8882,
+    "classes": {
+     "Single Swing Door": [
+      40,
+      0,
+      1
+     ],
+     "Double Swing Door": [
+      0,
+      1,
+      0
+     ],
+     "Window": [
+      14,
+      0,
+      2
+     ],
+     "Sink": [
+      13,
+      2,
+      0
+     ],
+     "Toilet": [
+      7,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      2
+     ],
+     "Shower": [
+      6,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      3,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     35,
+     5,
+     18
+    ],
+    "area_pixel": [
+     7055379,
+     682889,
+     20515
+    ],
+    "wall_pixel": [
+     954815,
+     85720,
+     154749
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 85,
+    "object_fp": 7,
+    "object_fn": 5,
+    "object_f1": 0.9341,
+    "area_instance_f1": 0.7826,
+    "area_pixel_f1": 0.9741,
+    "wall_pixel_f1": 0.8539,
+    "classes": {
+     "Single Swing Door": [
+      40,
+      0,
+      1
+     ],
+     "Double Swing Door": [
+      0,
+      1,
+      0
+     ],
+     "Window": [
+      15,
+      0,
+      1
+     ],
+     "Sink": [
+      13,
+      3,
+      0
+     ],
+     "Toilet": [
+      7,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      2
+     ],
+     "Shower": [
+      6,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      3,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     36,
+     3,
+     17
+    ],
+    "area_pixel": [
+     7030441,
+     328848,
+     45453
+    ],
+    "wall_pixel": [
+     860746,
+     45674,
+     248818
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 85,
+    "object_fp": 5,
+    "object_fn": 5,
+    "object_f1": 0.9444,
+    "area_instance_f1": 0.7158,
+    "area_pixel_f1": 0.9789,
+    "wall_pixel_f1": 0.8807,
+    "classes": {
+     "Single Swing Door": [
+      40,
+      0,
+      1
+     ],
+     "Double Swing Door": [
+      0,
+      1,
+      0
+     ],
+     "Window": [
+      15,
+      0,
+      1
+     ],
+     "Sink": [
+      13,
+      1,
+      0
+     ],
+     "Toilet": [
+      7,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      2
+     ],
+     "Shower": [
+      6,
+      0,
+      0
+     ],
+     "Cooktops": [
+      2,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      3,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     34,
+     8,
+     19
+    ],
+    "area_pixel": [
+     6976812,
+     202039,
+     99082
+    ],
+    "wall_pixel": [
+     880412,
+     9326,
+     229152
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 39,
+    "object_fp": 54,
+    "object_fn": 51,
+    "object_f1": 0.4262,
+    "area_instance_f1": 0.7312,
+    "area_pixel_f1": 0.9222,
+    "wall_pixel_f1": 0.5112,
+    "classes": {
+     "Single Swing Door": [
+      21,
+      22,
+      20
+     ],
+     "Double Swing Door": [
+      0,
+      3,
+      0
+     ],
+     "Window": [
+      8,
+      5,
+      8
+     ],
+     "Sink": [
+      0,
+      14,
+      13
+     ],
+     "Toilet": [
+      2,
+      5,
+      5
+     ],
+     "Bathtub": [
+      2,
+      0,
+      0
+     ],
+     "Shower": [
+      4,
+      0,
+      2
+     ],
+     "Cooktops": [
+      0,
+      2,
+      2
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      3,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     34,
+     6,
+     19
+    ],
+    "area_pixel": [
+     6533567,
+     560681,
+     542327
+    ],
+    "wall_pixel": [
+     758651,
+     1100145,
+     350913
+    ]
+   }
+  },
+  "sheet_11": {
+   "Kamai Nov26": {
+    "object_tp": 141,
+    "object_fp": 9,
+    "object_fn": 1,
+    "object_f1": 0.9658,
+    "area_instance_f1": 0.9767,
+    "area_pixel_f1": 0.9931,
+    "wall_pixel_f1": 0.9444,
+    "classes": {
+     "Single Swing Door": [
+      48,
+      3,
+      0
+     ],
+     "Double Swing Door": [
+      7,
+      0,
+      0
+     ],
+     "Window": [
+      35,
+      5,
+      0
+     ],
+     "Sink": [
+      18,
+      0,
+      1
+     ],
+     "Toilet": [
+      9,
+      1,
+      0
+     ],
+     "Bathtub": [
+      8,
+      0,
+      0
+     ],
+     "Shower": [
+      2,
+      0,
+      0
+     ],
+     "Cooktops": [
+      8,
+      0,
+      0
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      4,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     63,
+     0,
+     3
+    ],
+    "area_pixel": [
+     4505161,
+     50252,
+     12619
+    ],
+    "wall_pixel": [
+     881934,
+     19102,
+     84684
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 131,
+    "object_fp": 21,
+    "object_fn": 5,
+    "object_f1": 0.9097,
+    "area_instance_f1": 0.9449,
+    "area_pixel_f1": 0.9809,
+    "wall_pixel_f1": 0.8588,
+    "classes": {
+     "Single Swing Door": [
+      48,
+      3,
+      0
+     ],
+     "Double Swing Door": [
+      7,
+      0,
+      0
+     ],
+     "Window": [
+      33,
+      15,
+      2
+     ],
+     "Sink": [
+      18,
+      0,
+      1
+     ],
+     "Toilet": [
+      9,
+      1,
+      0
+     ],
+     "Bathtub": [
+      8,
+      2,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      2
+     ],
+     "Cooktops": [
+      8,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      2
+     ],
+     "Stairs": [
+      0,
+      0,
+      4
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     60,
+     1,
+     6
+    ],
+    "area_pixel": [
+     4400193,
+     53551,
+     117587
+    ],
+    "wall_pixel": [
+     775416,
+     63849,
+     191202
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 121,
+    "object_fp": 31,
+    "object_fn": 21,
+    "object_f1": 0.8231,
+    "area_instance_f1": 0.963,
+    "area_pixel_f1": 0.9777,
+    "wall_pixel_f1": 0.8314,
+    "classes": {
+     "Single Swing Door": [
+      46,
+      3,
+      2
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      7
+     ],
+     "Window": [
+      28,
+      25,
+      7
+     ],
+     "Sink": [
+      17,
+      1,
+      2
+     ],
+     "Toilet": [
+      9,
+      1,
+      0
+     ],
+     "Bathtub": [
+      7,
+      0,
+      1
+     ],
+     "Shower": [
+      2,
+      1,
+      0
+     ],
+     "Cooktops": [
+      8,
+      0,
+      0
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     65,
+     4,
+     1
+    ],
+    "area_pixel": [
+     4460742,
+     146139,
+     57038
+    ],
+    "wall_pixel": [
+     783063,
+     134002,
+     183555
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 116,
+    "object_fp": 35,
+    "object_fn": 26,
+    "object_f1": 0.7918,
+    "area_instance_f1": 0.9242,
+    "area_pixel_f1": 0.9709,
+    "wall_pixel_f1": 0.7901,
+    "classes": {
+     "Single Swing Door": [
+      45,
+      1,
+      3
+     ],
+     "Double Swing Door": [
+      0,
+      2,
+      7
+     ],
+     "Window": [
+      28,
+      25,
+      7
+     ],
+     "Sink": [
+      15,
+      3,
+      4
+     ],
+     "Toilet": [
+      8,
+      2,
+      1
+     ],
+     "Bathtub": [
+      7,
+      0,
+      1
+     ],
+     "Shower": [
+      2,
+      1,
+      0
+     ],
+     "Cooktops": [
+      7,
+      1,
+      1
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     61,
+     5,
+     5
+    ],
+    "area_pixel": [
+     4435689,
+     184018,
+     82091
+    ],
+    "wall_pixel": [
+     725303,
+     144057,
+     241315
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 120,
+    "object_fp": 32,
+    "object_fn": 22,
+    "object_f1": 0.8163,
+    "area_instance_f1": 0.9062,
+    "area_pixel_f1": 0.9066,
+    "wall_pixel_f1": 0.7521,
+    "classes": {
+     "Single Swing Door": [
+      45,
+      1,
+      3
+     ],
+     "Double Swing Door": [
+      0,
+      2,
+      7
+     ],
+     "Window": [
+      27,
+      27,
+      8
+     ],
+     "Sink": [
+      18,
+      0,
+      1
+     ],
+     "Toilet": [
+      9,
+      1,
+      0
+     ],
+     "Bathtub": [
+      8,
+      1,
+      0
+     ],
+     "Shower": [
+      1,
+      0,
+      1
+     ],
+     "Cooktops": [
+      8,
+      0,
+      0
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     58,
+     4,
+     8
+    ],
+    "area_pixel": [
+     3832157,
+     103989,
+     685623
+    ],
+    "wall_pixel": [
+     664974,
+     136623,
+     301644
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 35,
+    "object_fp": 127,
+    "object_fn": 107,
+    "object_f1": 0.2303,
+    "area_instance_f1": 0.7581,
+    "area_pixel_f1": 0.8847,
+    "wall_pixel_f1": 0.5111,
+    "classes": {
+     "Single Swing Door": [
+      10,
+      48,
+      38
+     ],
+     "Double Swing Door": [
+      1,
+      10,
+      6
+     ],
+     "Window": [
+      13,
+      30,
+      22
+     ],
+     "Sink": [
+      1,
+      17,
+      18
+     ],
+     "Toilet": [
+      1,
+      9,
+      8
+     ],
+     "Bathtub": [
+      1,
+      8,
+      7
+     ],
+     "Shower": [
+      0,
+      1,
+      2
+     ],
+     "Cooktops": [
+      4,
+      4,
+      4
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     47,
+     11,
+     19
+    ],
+    "area_pixel": [
+     3836480,
+     318632,
+     681300
+    ],
+    "wall_pixel": [
+     543123,
+     615585,
+     423495
+    ]
+   }
+  },
+  "sheet_12": {
+   "Kamai Nov26": {
+    "object_tp": 152,
+    "object_fp": 2,
+    "object_fn": 2,
+    "object_f1": 0.987,
+    "area_instance_f1": 0.9612,
+    "area_pixel_f1": 0.9926,
+    "wall_pixel_f1": 0.9401,
+    "classes": {
+     "Single Swing Door": [
+      52,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      7,
+      0,
+      0
+     ],
+     "Window": [
+      38,
+      2,
+      0
+     ],
+     "Sink": [
+      20,
+      0,
+      0
+     ],
+     "Toilet": [
+      11,
+      0,
+      0
+     ],
+     "Bathtub": [
+      9,
+      0,
+      2
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      9,
+      0,
+      0
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      4,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 9,
+    "area_instance": [
+     62,
+     0,
+     5
+    ],
+    "area_pixel": [
+     4309400,
+     53844,
+     9983
+    ],
+    "wall_pixel": [
+     822845,
+     15351,
+     89472
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 144,
+    "object_fp": 0,
+    "object_fn": 4,
+    "object_f1": 0.9863,
+    "area_instance_f1": 0.9531,
+    "area_pixel_f1": 0.9924,
+    "wall_pixel_f1": 0.9121,
+    "classes": {
+     "Single Swing Door": [
+      52,
+      0,
+      0
+     ],
+     "Double Swing Door": [
+      7,
+      0,
+      0
+     ],
+     "Window": [
+      34,
+      0,
+      4
+     ],
+     "Sink": [
+      20,
+      0,
+      0
+     ],
+     "Toilet": [
+      11,
+      0,
+      0
+     ],
+     "Bathtub": [
+      11,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      9,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      2
+     ],
+     "Stairs": [
+      0,
+      0,
+      4
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     61,
+     0,
+     6
+    ],
+    "area_pixel": [
+     4305494,
+     52329,
+     13889
+    ],
+    "wall_pixel": [
+     785044,
+     23981,
+     127273
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 132,
+    "object_fp": 3,
+    "object_fn": 22,
+    "object_f1": 0.9135,
+    "area_instance_f1": 0.9853,
+    "area_pixel_f1": 0.9782,
+    "wall_pixel_f1": 0.796,
+    "classes": {
+     "Single Swing Door": [
+      48,
+      0,
+      4
+     ],
+     "Double Swing Door": [
+      1,
+      0,
+      6
+     ],
+     "Window": [
+      31,
+      0,
+      7
+     ],
+     "Sink": [
+      20,
+      0,
+      0
+     ],
+     "Toilet": [
+      11,
+      0,
+      0
+     ],
+     "Bathtub": [
+      8,
+      0,
+      3
+     ],
+     "Shower": [
+      0,
+      3,
+      0
+     ],
+     "Cooktops": [
+      9,
+      0,
+      0
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 27,
+    "area_instance": [
+     67,
+     2,
+     0
+    ],
+    "area_pixel": [
+     4209623,
+     78183,
+     109760
+    ],
+    "wall_pixel": [
+     727350,
+     187948,
+     184967
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 126,
+    "object_fp": 8,
+    "object_fn": 28,
+    "object_f1": 0.875,
+    "area_instance_f1": 0.963,
+    "area_pixel_f1": 0.9721,
+    "wall_pixel_f1": 0.7212,
+    "classes": {
+     "Single Swing Door": [
+      48,
+      0,
+      4
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      7
+     ],
+     "Window": [
+      31,
+      0,
+      7
+     ],
+     "Sink": [
+      18,
+      2,
+      2
+     ],
+     "Toilet": [
+      8,
+      3,
+      3
+     ],
+     "Bathtub": [
+      8,
+      0,
+      3
+     ],
+     "Shower": [
+      0,
+      3,
+      0
+     ],
+     "Cooktops": [
+      9,
+      0,
+      0
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 27,
+    "area_instance": [
+     65,
+     3,
+     2
+    ],
+    "area_pixel": [
+     4247294,
+     172144,
+     72089
+    ],
+    "wall_pixel": [
+     632221,
+     208649,
+     280096
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 131,
+    "object_fp": 3,
+    "object_fn": 23,
+    "object_f1": 0.9097,
+    "area_instance_f1": 0.9853,
+    "area_pixel_f1": 0.9758,
+    "wall_pixel_f1": 0.7742,
+    "classes": {
+     "Single Swing Door": [
+      48,
+      0,
+      4
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      7
+     ],
+     "Window": [
+      31,
+      0,
+      7
+     ],
+     "Sink": [
+      20,
+      0,
+      0
+     ],
+     "Toilet": [
+      11,
+      0,
+      0
+     ],
+     "Bathtub": [
+      8,
+      0,
+      3
+     ],
+     "Shower": [
+      0,
+      3,
+      0
+     ],
+     "Cooktops": [
+      9,
+      0,
+      0
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 27,
+    "area_instance": [
+     67,
+     2,
+     0
+    ],
+    "area_pixel": [
+     4179781,
+     67308,
+     139602
+    ],
+    "wall_pixel": [
+     726888,
+     238552,
+     185429
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 35,
+    "object_fp": 129,
+    "object_fn": 119,
+    "object_f1": 0.2201,
+    "area_instance_f1": 0.625,
+    "area_pixel_f1": 0.8941,
+    "wall_pixel_f1": 0.4827,
+    "classes": {
+     "Single Swing Door": [
+      10,
+      40,
+      42
+     ],
+     "Double Swing Door": [
+      1,
+      8,
+      6
+     ],
+     "Window": [
+      16,
+      34,
+      22
+     ],
+     "Sink": [
+      1,
+      19,
+      19
+     ],
+     "Toilet": [
+      0,
+      11,
+      11
+     ],
+     "Bathtub": [
+      1,
+      7,
+      10
+     ],
+     "Shower": [
+      0,
+      3,
+      0
+     ],
+     "Cooktops": [
+      3,
+      6,
+      6
+     ],
+     "Elevator": [
+      2,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      1,
+      3
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 3,
+    "area_instance": [
+     40,
+     21,
+     27
+    ],
+    "area_pixel": [
+     3787719,
+     365630,
+     531664
+    ],
+    "wall_pixel": [
+     422323,
+     415240,
+     489994
+    ]
+   }
+  },
+  "sheet_13": {
+   "Kamai Nov26": {
+    "object_tp": 169,
+    "object_fp": 9,
+    "object_fn": 3,
+    "object_f1": 0.9657,
+    "area_instance_f1": 1.0,
+    "area_pixel_f1": 0.9938,
+    "wall_pixel_f1": 0.9759,
+    "classes": {
+     "Single Swing Door": [
+      57,
+      1,
+      2
+     ],
+     "Double Swing Door": [
+      5,
+      0,
+      0
+     ],
+     "Window": [
+      57,
+      8,
+      0
+     ],
+     "Sink": [
+      21,
+      0,
+      0
+     ],
+     "Toilet": [
+      14,
+      0,
+      0
+     ],
+     "Bathtub": [
+      13,
+      0,
+      1
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      2,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     97,
+     0,
+     0
+    ],
+    "area_pixel": [
+     8059562,
+     62894,
+     38081
+    ],
+    "wall_pixel": [
+     1136212,
+     21569,
+     34545
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 166,
+    "object_fp": 17,
+    "object_fn": 4,
+    "object_f1": 0.9405,
+    "area_instance_f1": 0.9744,
+    "area_pixel_f1": 0.978,
+    "wall_pixel_f1": 0.964,
+    "classes": {
+     "Single Swing Door": [
+      58,
+      0,
+      1
+     ],
+     "Double Swing Door": [
+      5,
+      0,
+      0
+     ],
+     "Window": [
+      54,
+      17,
+      3
+     ],
+     "Sink": [
+      21,
+      0,
+      0
+     ],
+     "Toilet": [
+      14,
+      0,
+      0
+     ],
+     "Bathtub": [
+      14,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     95,
+     3,
+     2
+    ],
+    "area_pixel": [
+     7792115,
+     44868,
+     305528
+    ],
+    "wall_pixel": [
+     1131898,
+     45599,
+     38859
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 124,
+    "object_fp": 44,
+    "object_fn": 48,
+    "object_f1": 0.7294,
+    "area_instance_f1": 0.8936,
+    "area_pixel_f1": 0.9517,
+    "wall_pixel_f1": 0.686,
+    "classes": {
+     "Single Swing Door": [
+      37,
+      7,
+      22
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      5
+     ],
+     "Window": [
+      42,
+      30,
+      15
+     ],
+     "Sink": [
+      20,
+      3,
+      1
+     ],
+     "Toilet": [
+      14,
+      0,
+      0
+     ],
+     "Bathtub": [
+      10,
+      0,
+      4
+     ],
+     "Shower": [
+      0,
+      4,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     84,
+     7,
+     13
+    ],
+    "area_pixel": [
+     7645812,
+     324165,
+     451831
+    ],
+    "wall_pixel": [
+     788565,
+     339623,
+     382192
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 124,
+    "object_fp": 36,
+    "object_fn": 48,
+    "object_f1": 0.747,
+    "area_instance_f1": 0.9082,
+    "area_pixel_f1": 0.9654,
+    "wall_pixel_f1": 0.8448,
+    "classes": {
+     "Single Swing Door": [
+      41,
+      0,
+      18
+     ],
+     "Double Swing Door": [
+      2,
+      0,
+      3
+     ],
+     "Window": [
+      45,
+      22,
+      12
+     ],
+     "Sink": [
+      21,
+      0,
+      0
+     ],
+     "Toilet": [
+      14,
+      0,
+      0
+     ],
+     "Bathtub": [
+      0,
+      0,
+      14
+     ],
+     "Shower": [
+      0,
+      14,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     94,
+     16,
+     3
+    ],
+    "area_pixel": [
+     7878102,
+     344655,
+     219541
+    ],
+    "wall_pixel": [
+     916405,
+     82290,
+     254352
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 117,
+    "object_fp": 34,
+    "object_fn": 55,
+    "object_f1": 0.7245,
+    "area_instance_f1": 0.8757,
+    "area_pixel_f1": 0.9675,
+    "wall_pixel_f1": 0.9063,
+    "classes": {
+     "Single Swing Door": [
+      40,
+      0,
+      19
+     ],
+     "Double Swing Door": [
+      2,
+      0,
+      3
+     ],
+     "Window": [
+      25,
+      34,
+      32
+     ],
+     "Sink": [
+      21,
+      0,
+      0
+     ],
+     "Toilet": [
+      14,
+      0,
+      0
+     ],
+     "Bathtub": [
+      14,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      0,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     81,
+     7,
+     16
+    ],
+    "area_pixel": [
+     7777807,
+     203268,
+     319836
+    ],
+    "wall_pixel": [
+     993759,
+     28569,
+     176998
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 61,
+    "object_fp": 128,
+    "object_fn": 111,
+    "object_f1": 0.338,
+    "area_instance_f1": 0.3711,
+    "area_pixel_f1": 0.8935,
+    "wall_pixel_f1": 0.3778,
+    "classes": {
+     "Single Swing Door": [
+      7,
+      48,
+      52
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      5
+     ],
+     "Window": [
+      41,
+      25,
+      16
+     ],
+     "Sink": [
+      4,
+      22,
+      17
+     ],
+     "Toilet": [
+      5,
+      10,
+      9
+     ],
+     "Bathtub": [
+      4,
+      7,
+      10
+     ],
+     "Shower": [
+      0,
+      4,
+      0
+     ],
+     "Cooktops": [
+      0,
+      11,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      1,
+      2
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     36,
+     61,
+     61
+    ],
+    "area_pixel": [
+     7228905,
+     854152,
+     868738
+    ],
+    "wall_pixel": [
+     515918,
+     1044719,
+     654839
+    ]
+   }
+  },
+  "sheet_14": {
+   "Kamai Nov26": {
+    "object_tp": 286,
+    "object_fp": 1,
+    "object_fn": 23,
+    "object_f1": 0.9597,
+    "area_instance_f1": 0.916,
+    "area_pixel_f1": 0.9553,
+    "wall_pixel_f1": 0.9002,
+    "classes": {
+     "Single Swing Door": [
+      162,
+      0,
+      17
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      39,
+      1,
+      5
+     ],
+     "Sink": [
+      33,
+      0,
+      1
+     ],
+     "Toilet": [
+      19,
+      0,
+      0
+     ],
+     "Bathtub": [
+      18,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     180,
+     6,
+     27
+    ],
+    "area_pixel": [
+     5312731,
+     349461,
+     147249
+    ],
+    "wall_pixel": [
+     675921,
+     62934,
+     86881
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 281,
+    "object_fp": 1,
+    "object_fn": 27,
+    "object_f1": 0.9525,
+    "area_instance_f1": 0.7138,
+    "area_pixel_f1": 0.9906,
+    "wall_pixel_f1": 0.9155,
+    "classes": {
+     "Single Swing Door": [
+      156,
+      0,
+      23
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      40,
+      1,
+      4
+     ],
+     "Sink": [
+      34,
+      0,
+      0
+     ],
+     "Toilet": [
+      19,
+      0,
+      0
+     ],
+     "Bathtub": [
+      18,
+      0,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      0,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     116,
+     2,
+     91
+    ],
+    "area_pixel": [
+     5415563,
+     58359,
+     44417
+    ],
+    "wall_pixel": [
+     675948,
+     37936,
+     86854
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 257,
+    "object_fp": 1,
+    "object_fn": 52,
+    "object_f1": 0.9065,
+    "area_instance_f1": 0.8215,
+    "area_pixel_f1": 0.9612,
+    "wall_pixel_f1": 0.8734,
+    "classes": {
+     "Single Swing Door": [
+      135,
+      0,
+      44
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      37,
+      0,
+      7
+     ],
+     "Sink": [
+      33,
+      0,
+      1
+     ],
+     "Toilet": [
+      19,
+      0,
+      0
+     ],
+     "Bathtub": [
+      18,
+      1,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     145,
+     1,
+     62
+    ],
+    "area_pixel": [
+     5220312,
+     181851,
+     239668
+    ],
+    "wall_pixel": [
+     617751,
+     33962,
+     145051
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 266,
+    "object_fp": 3,
+    "object_fn": 43,
+    "object_f1": 0.9204,
+    "area_instance_f1": 0.9388,
+    "area_pixel_f1": 0.8979,
+    "wall_pixel_f1": 0.7622,
+    "classes": {
+     "Single Swing Door": [
+      149,
+      0,
+      30
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      34,
+      0,
+      10
+     ],
+     "Sink": [
+      31,
+      2,
+      3
+     ],
+     "Toilet": [
+      19,
+      0,
+      0
+     ],
+     "Bathtub": [
+      18,
+      1,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     184,
+     1,
+     23
+    ],
+    "area_pixel": [
+     4623938,
+     215819,
+     836042
+    ],
+    "wall_pixel": [
+     479251,
+     15423,
+     283551
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 286,
+    "object_fp": 6,
+    "object_fn": 23,
+    "object_f1": 0.9517,
+    "area_instance_f1": 0.8476,
+    "area_pixel_f1": 0.899,
+    "wall_pixel_f1": 0.8846,
+    "classes": {
+     "Single Swing Door": [
+      164,
+      0,
+      15
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      37,
+      5,
+      7
+     ],
+     "Sink": [
+      33,
+      0,
+      1
+     ],
+     "Toilet": [
+      19,
+      0,
+      0
+     ],
+     "Bathtub": [
+      18,
+      1,
+      0
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     153,
+     1,
+     54
+    ],
+    "area_pixel": [
+     4541079,
+     101472,
+     918901
+    ],
+    "wall_pixel": [
+     650613,
+     57608,
+     112189
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 48,
+    "object_fp": 67,
+    "object_fn": 261,
+    "object_f1": 0.2264,
+    "area_instance_f1": 0.2624,
+    "area_pixel_f1": 0.8477,
+    "wall_pixel_f1": 0.4825,
+    "classes": {
+     "Single Swing Door": [
+      27,
+      17,
+      152
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      0
+     ],
+     "Window": [
+      0,
+      0,
+      44
+     ],
+     "Sink": [
+      3,
+      25,
+      31
+     ],
+     "Toilet": [
+      3,
+      11,
+      16
+     ],
+     "Bathtub": [
+      1,
+      13,
+      17
+     ],
+     "Shower": [
+      0,
+      0,
+      0
+     ],
+     "Cooktops": [
+      13,
+      1,
+      1
+     ],
+     "Elevator": [
+      0,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     37,
+     38,
+     170
+    ],
+    "area_pixel": [
+     4516113,
+     679393,
+     943867
+    ],
+    "wall_pixel": [
+     385959,
+     451161,
+     376843
+    ]
+   }
+  },
+  "sheet_15": {
+   "Kamai Nov26": {
+    "object_tp": 308,
+    "object_fp": 8,
+    "object_fn": 6,
+    "object_f1": 0.9778,
+    "area_instance_f1": 0.9643,
+    "area_pixel_f1": 0.9811,
+    "wall_pixel_f1": 0.9669,
+    "classes": {
+     "Single Swing Door": [
+      126,
+      6,
+      4
+     ],
+     "Double Swing Door": [
+      17,
+      1,
+      0
+     ],
+     "Window": [
+      68,
+      0,
+      2
+     ],
+     "Sink": [
+      42,
+      0,
+      0
+     ],
+     "Toilet": [
+      20,
+      1,
+      0
+     ],
+     "Bathtub": [
+      14,
+      0,
+      0
+     ],
+     "Shower": [
+      5,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      1,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     135,
+     3,
+     7
+    ],
+    "area_pixel": [
+     6192572,
+     196564,
+     42435
+    ],
+    "wall_pixel": [
+     767128,
+     28917,
+     23614
+    ]
+   },
+   "Kamai Aug26": {
+    "object_tp": 293,
+    "object_fp": 2,
+    "object_fn": 19,
+    "object_f1": 0.9654,
+    "area_instance_f1": 0.9673,
+    "area_pixel_f1": 0.9933,
+    "wall_pixel_f1": 0.9345,
+    "classes": {
+     "Single Swing Door": [
+      114,
+      1,
+      16
+     ],
+     "Double Swing Door": [
+      17,
+      1,
+      0
+     ],
+     "Window": [
+      68,
+      0,
+      2
+     ],
+     "Sink": [
+      42,
+      0,
+      0
+     ],
+     "Toilet": [
+      20,
+      0,
+      0
+     ],
+     "Bathtub": [
+      13,
+      0,
+      1
+     ],
+     "Shower": [
+      5,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      0,
+      0,
+      1
+     ],
+     "Stairs": [
+      0,
+      0,
+      1
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     133,
+     0,
+     9
+    ],
+    "area_pixel": [
+     6182251,
+     30628,
+     52756
+    ],
+    "wall_pixel": [
+     734992,
+     47209,
+     55750
+    ]
+   },
+   "GPT-6 Astra": {
+    "object_tp": 290,
+    "object_fp": 14,
+    "object_fn": 24,
+    "object_f1": 0.9385,
+    "area_instance_f1": 0.7294,
+    "area_pixel_f1": 0.9282,
+    "wall_pixel_f1": 0.7823,
+    "classes": {
+     "Single Swing Door": [
+      119,
+      4,
+      11
+     ],
+     "Double Swing Door": [
+      13,
+      1,
+      4
+     ],
+     "Window": [
+      68,
+      0,
+      2
+     ],
+     "Sink": [
+      39,
+      3,
+      3
+     ],
+     "Toilet": [
+      18,
+      3,
+      2
+     ],
+     "Bathtub": [
+      12,
+      2,
+      2
+     ],
+     "Shower": [
+      5,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      1,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      1,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     93,
+     20,
+     49
+    ],
+    "area_pixel": [
+     5662410,
+     303476,
+     572597
+    ],
+    "wall_pixel": [
+     582244,
+     115529,
+     208498
+    ]
+   },
+   "GPT-6.1 Sol": {
+    "object_tp": 291,
+    "object_fp": 2,
+    "object_fn": 23,
+    "object_f1": 0.9588,
+    "area_instance_f1": 0.9181,
+    "area_pixel_f1": 0.9659,
+    "wall_pixel_f1": 0.6615,
+    "classes": {
+     "Single Swing Door": [
+      128,
+      1,
+      2
+     ],
+     "Double Swing Door": [
+      0,
+      0,
+      17
+     ],
+     "Window": [
+      66,
+      0,
+      4
+     ],
+     "Sink": [
+      42,
+      0,
+      0
+     ],
+     "Toilet": [
+      20,
+      1,
+      0
+     ],
+     "Bathtub": [
+      14,
+      0,
+      0
+     ],
+     "Shower": [
+      5,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      1,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     129,
+     10,
+     13
+    ],
+    "area_pixel": [
+     6085731,
+     279959,
+     149276
+    ],
+    "wall_pixel": [
+     439149,
+     97856,
+     351593
+    ]
+   },
+   "Claude Opus 5.5": {
+    "object_tp": 304,
+    "object_fp": 27,
+    "object_fn": 10,
+    "object_f1": 0.9426,
+    "area_instance_f1": 0.8938,
+    "area_pixel_f1": 0.9695,
+    "wall_pixel_f1": 0.9143,
+    "classes": {
+     "Single Swing Door": [
+      122,
+      1,
+      8
+     ],
+     "Double Swing Door": [
+      17,
+      2,
+      0
+     ],
+     "Window": [
+      68,
+      0,
+      2
+     ],
+     "Sink": [
+      42,
+      24,
+      0
+     ],
+     "Toilet": [
+      20,
+      0,
+      0
+     ],
+     "Bathtub": [
+      14,
+      0,
+      0
+     ],
+     "Shower": [
+      5,
+      0,
+      0
+     ],
+     "Cooktops": [
+      14,
+      0,
+      0
+     ],
+     "Elevator": [
+      1,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     122,
+     9,
+     20
+    ],
+    "area_pixel": [
+     6113138,
+     262374,
+     121869
+    ],
+    "wall_pixel": [
+     697011,
+     36898,
+     93731
+    ]
+   },
+   "Gemini 4 Argon": {
+    "object_tp": 77,
+    "object_fp": 184,
+    "object_fn": 237,
+    "object_f1": 0.2678,
+    "area_instance_f1": 0.303,
+    "area_pixel_f1": 0.868,
+    "wall_pixel_f1": 0.3664,
+    "classes": {
+     "Single Swing Door": [
+      32,
+      65,
+      98
+     ],
+     "Double Swing Door": [
+      0,
+      9,
+      17
+     ],
+     "Window": [
+      41,
+      23,
+      29
+     ],
+     "Sink": [
+      1,
+      36,
+      41
+     ],
+     "Toilet": [
+      0,
+      19,
+      20
+     ],
+     "Bathtub": [
+      0,
+      13,
+      14
+     ],
+     "Shower": [
+      0,
+      6,
+      5
+     ],
+     "Cooktops": [
+      1,
+      13,
+      13
+     ],
+     "Elevator": [
+      1,
+      0,
+      0
+     ],
+     "Stairs": [
+      1,
+      0,
+      0
+     ]
+    },
+    "outside_vocabulary_fp": 0,
+    "not_scored_by_ledger": 0,
+    "area_instance": [
+     35,
+     54,
+     107
+    ],
+    "area_pixel": [
+     5510230,
+     951748,
+     724777
+    ],
+    "wall_pixel": [
+     354108,
+     788290,
+     436634
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,536 @@
+{
+ "_about": "Review ledger for the annotation of the 15 released sheets. The annotation files are not edited; scoring/score.py applies this ledger on top of them, for every system alike. \"fixes\" are annotated shapes that the drawing shows to be something else: each is removed from the object annotation, or relabelled. \"added\" are windows the annotators missed, added as upright boxes. \"not_scored\" are boxes in which a delivered object of the named class that matches nothing is neither found nor false, because the drawing shows such an object there and the annotation does not mark it separately. Boxes are [x0, y0, x1, y1] in the pixel frame of the annotation; a fix names the annotated shape by its class and its bounding box (within one pixel). Every entry was checked against the drawing by the benchmark owner. The ledger changes the object annotation only: areas and walls are scored on the annotation as exported.",
+ "rules": "AEC-Geometric-Bench-15, rules of 23 November 2026",
+ "counts": {
+  "fixes": 22,
+  "added": 2,
+  "not_scored_boxes": 31
+ },
+ "fixes": [
+  {
+   "sheet": "sheet_15",
+   "annotated_as": "Window",
+   "box": [
+    1217.0,
+    2823.7,
+    1295.2,
+    2889.9
+   ],
+   "action": "remove",
+   "why": "a door: the swing is drawn at a door tag",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_11",
+   "annotated_as": "Window",
+   "box": [
+    2931.3,
+    2140.1,
+    3006.6,
+    2217.6
+   ],
+   "action": "remove",
+   "why": "a door: door swing in the corridor",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_11",
+   "annotated_as": "Window",
+   "box": [
+    3006.7,
+    2140.0,
+    3083.5,
+    2217.6
+   ],
+   "action": "remove",
+   "why": "a door: door swing in the corridor",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_11",
+   "annotated_as": "Window",
+   "box": [
+    3381.9,
+    2237.8,
+    3459.9,
+    2325.8
+   ],
+   "action": "remove",
+   "why": "a door: door swing in the corridor",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_09",
+   "annotated_as": "Window",
+   "box": [
+    865.8,
+    3468.0,
+    941.9,
+    3482.8
+   ],
+   "action": "remove",
+   "why": "glass panel of a shower enclosure",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_09",
+   "annotated_as": "Window",
+   "box": [
+    682.0,
+    3467.7,
+    758.4,
+    3483.1
+   ],
+   "action": "remove",
+   "why": "glass panel of a shower enclosure",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_09",
+   "annotated_as": "Window",
+   "box": [
+    5910.9,
+    3427.1,
+    5926.5,
+    3525.0
+   ],
+   "action": "remove",
+   "why": "glass panel of a shower enclosure",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_09",
+   "annotated_as": "Window",
+   "box": [
+    4764.4,
+    1755.7,
+    4888.2,
+    1770.2
+   ],
+   "action": "remove",
+   "why": "glass panel of a shower enclosure",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_09",
+   "annotated_as": "Window",
+   "box": [
+    4584.8,
+    3558.8,
+    4640.4,
+    3767.3
+   ],
+   "action": "remove",
+   "why": "glass panel of a shower enclosure",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_09",
+   "annotated_as": "Window",
+   "box": [
+    2500.3,
+    3568.2,
+    2726.7,
+    3736.9
+   ],
+   "action": "remove",
+   "why": "a door: the drawing labels it a pivot door",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_06",
+   "annotated_as": "Window",
+   "box": [
+    2570.9,
+    3060.8,
+    2804.1,
+    3072.9
+   ],
+   "action": "remove",
+   "why": "not a window: one of three boxes in a row along the wall above the stairs",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_06",
+   "annotated_as": "Window",
+   "box": [
+    2328.6,
+    3060.9,
+    2570.8,
+    3073.3
+   ],
+   "action": "remove",
+   "why": "not a window: one of three boxes in a row along the wall above the stairs",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_06",
+   "annotated_as": "Window",
+   "box": [
+    2804.1,
+    3061.0,
+    3039.8,
+    3073.5
+   ],
+   "action": "remove",
+   "why": "not a window: one of three boxes in a row along the wall above the stairs",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_03",
+   "annotated_as": "Window",
+   "box": [
+    788.3,
+    1206.0,
+    881.0,
+    1317.9
+   ],
+   "action": "remove",
+   "why": "a door: door swing next to the stair",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_10",
+   "annotated_as": "Window",
+   "box": [
+    3731.1,
+    1781.2,
+    4047.4,
+    1961.2
+   ],
+   "action": "remove",
+   "why": "a door",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_04",
+   "annotated_as": "Room",
+   "box": [
+    2842,
+    1672,
+    3058,
+    1843
+   ],
+   "action": "relabel",
+   "to": "Elevator",
+   "why": "the lift car drawn in the shaft, annotated as a room",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_07",
+   "annotated_as": "Window",
+   "box": [
+    5001.2,
+    4714.7,
+    5150.9,
+    4830.7
+   ],
+   "action": "remove",
+   "why": "a door",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_07",
+   "annotated_as": "Window",
+   "box": [
+    5917.4,
+    2611.7,
+    6075.4,
+    2815.7
+   ],
+   "action": "remove",
+   "why": "a door",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_09",
+   "annotated_as": "Window",
+   "box": [
+    6035.6,
+    3953.7,
+    6161.6,
+    4071.8
+   ],
+   "action": "remove",
+   "why": "a door: door swing, threshold and outside pad are drawn",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_09",
+   "annotated_as": "Window",
+   "box": [
+    5068.5,
+    3763.2,
+    5182.1,
+    3871.0
+   ],
+   "action": "remove",
+   "why": "a door: door leaf, swing arc and threshold are drawn",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_07",
+   "annotated_as": "Window",
+   "box": [
+    3790.5,
+    2020.5,
+    3816.2,
+    2223.2
+   ],
+   "action": "remove",
+   "why": "the same window annotated twice side by side across the wall thickness; the other copy stays",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_07",
+   "annotated_as": "Window",
+   "box": [
+    2898.0,
+    930.6,
+    2917.0,
+    1145.6
+   ],
+   "action": "remove",
+   "why": "the same window annotated twice side by side across the wall thickness; the other copy stays",
+   "reviewed": "2026-10-11"
+  }
+ ],
+ "added": [
+  {
+   "sheet": "sheet_12",
+   "class": "Window",
+   "box": [
+    1811,
+    2844,
+    1860,
+    2903
+   ],
+   "why": "glazed opening in the exterior wall of a bedroom, not annotated",
+   "reviewed": "2026-10-11"
+  },
+  {
+   "sheet": "sheet_12",
+   "class": "Window",
+   "box": [
+    1968,
+    1692,
+    1984,
+    1751
+   ],
+   "why": "framed window unit on the left facade, the one missing from the annotated row of units",
+   "reviewed": "2026-11-23"
+  }
+ ],
+ "not_scored": [
+  {
+   "sheet": "sheet_03",
+   "class": "Stairs",
+   "boxes": [
+    [
+     2136,
+     1180,
+     2202,
+     1231
+    ]
+   ],
+   "why": "lower flight of the annotated staircase: a second stairs box on the same staircase is neither found nor false",
+   "reviewed": "2026-11-23"
+  },
+  {
+   "sheet": "sheet_04",
+   "class": "Window",
+   "boxes": [
+    [
+     3118,
+     2611,
+     3146,
+     2704
+    ]
+   ],
+   "why": "upper pane of a two-pane window that is annotated as one box; the lower pane is the match",
+   "reviewed": "2026-11-23"
+  },
+  {
+   "sheet": "sheet_12",
+   "class": "Window",
+   "boxes": [
+    [
+     2350,
+     1258,
+     2401,
+     1283
+    ],
+    [
+     2492,
+     1259,
+     2580,
+     1284
+    ],
+    [
+     2634,
+     1260,
+     2718,
+     1285
+    ],
+    [
+     2066,
+     1262,
+     2154,
+     1282
+    ],
+    [
+     2208,
+     1263,
+     2296,
+     1283
+    ],
+    [
+     2391,
+     1264,
+     2438,
+     1284
+    ],
+    [
+     3354,
+     1264,
+     3427,
+     1289
+    ],
+    [
+     3765,
+     1266,
+     3853,
+     1292
+    ],
+    [
+     3907,
+     1267,
+     3995,
+     1292
+    ],
+    [
+     3481,
+     1270,
+     3569,
+     1290
+    ],
+    [
+     3623,
+     1271,
+     3711,
+     1291
+    ],
+    [
+     1965,
+     1320,
+     1990,
+     1408
+    ],
+    [
+     4033,
+     1331,
+     4058,
+     1419
+    ],
+    [
+     2825,
+     1378,
+     2925,
+     1403
+    ],
+    [
+     3015,
+     1379,
+     3115,
+     1404
+    ],
+    [
+     3192,
+     1380,
+     3281,
+     1405
+    ],
+    [
+     2742,
+     1383,
+     2830,
+     1403
+    ],
+    [
+     3110,
+     1385,
+     3197,
+     1405
+    ],
+    [
+     1964,
+     1462,
+     1990,
+     1550
+    ],
+    [
+     4032,
+     1473,
+     4057,
+     1561
+    ],
+    [
+     1969,
+     1604,
+     1989,
+     1692
+    ],
+    [
+     4031,
+     1619,
+     4056,
+     1687
+    ],
+    [
+     1963,
+     1746,
+     1988,
+     1820
+    ],
+    [
+     1962,
+     1888,
+     1988,
+     1976
+    ],
+    [
+     1967,
+     2030,
+     1987,
+     2118
+    ],
+    [
+     1961,
+     2172,
+     1986,
+     2255
+    ],
+    [
+     3988,
+     1269,
+     4055,
+     1291
+    ],
+    [
+     4035,
+     1273,
+     4057,
+     1339
+    ],
+    [
+     1967,
+     1261,
+     1989,
+     1328
+    ]
+   ],
+   "why": "continuous facade band between the annotated window units; only the framed units are annotated, so a window delivered on the band is neither found nor false",
+   "reviewed": "2026-11-23"
+  }
+ ]
+}

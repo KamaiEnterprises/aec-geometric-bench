@@ -1,0 +1,63 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "sheet",
+  "model",
+  "detections",
+  "truncated",
+  "notes"
+ ],
+ "properties": {
+  "sheet": {
+   "type": "string"
+  },
+  "model": {
+   "type": "string"
+  },
+  "detections": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "class",
+     "bbox",
+     "polygon"
+    ],
+    "properties": {
+     "class": {
+      "type": "string"
+     },
+     "bbox": {
+      "type": [
+       "array",
+       "null"
+      ],
+      "items": {
+       "type": "number"
+      }
+     },
+     "polygon": {
+      "type": [
+       "array",
+       "null"
+      ],
+      "items": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   }
+  },
+  "truncated": {
+   "type": "boolean"
+  },
+  "notes": {
+   "type": "string"
+  }
+ }
+}

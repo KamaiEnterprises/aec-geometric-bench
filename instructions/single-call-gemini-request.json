@@ -1,0 +1,81 @@
+{
+ "responseSchema": {
+  "type": "OBJECT",
+  "required": [
+   "detections",
+   "truncated"
+  ],
+  "properties": {
+   "detections": {
+    "type": "ARRAY",
+    "items": {
+     "type": "OBJECT",
+     "required": [
+      "class"
+     ],
+     "properties": {
+      "class": {
+       "type": "STRING",
+       "enum": [
+        "Wall",
+        "Room",
+        "Single Swing Door",
+        "Double Swing Door",
+        "Sliding Door",
+        "Closet Door",
+        "Shower Door",
+        "Casement Window",
+        "Sliding Window",
+        "Swing Window",
+        "Double Window",
+        "Safe Room Window",
+        "Sink",
+        "Toilet",
+        "Bathtub",
+        "Shower",
+        "Cooktops",
+        "Stairs",
+        "Elevator",
+        "Balcony",
+        "Railing",
+        "Shaft",
+        "Urinals"
+       ]
+      },
+      "box_2d": {
+       "type": "ARRAY",
+       "items": {
+        "type": "NUMBER"
+       },
+       "nullable": true
+      },
+      "polygon_2d": {
+       "type": "ARRAY",
+       "items": {
+        "type": "ARRAY",
+        "items": {
+         "type": "NUMBER"
+        }
+       },
+       "nullable": true
+      }
+     }
+    }
+   },
+   "truncated": {
+    "type": "BOOLEAN"
+   },
+   "notes": {
+    "type": "STRING"
+   }
+  }
+ },
+ "generationConfig": {
+  "maxOutputTokens": 65536,
+  "temperature": 1.0,
+  "seed": 7,
+  "thinkingLevel": "HIGH",
+  "mediaResolution": "MEDIA_RESOLUTION_HIGH",
+  "responseMimeType": "application/json"
+ }
+}

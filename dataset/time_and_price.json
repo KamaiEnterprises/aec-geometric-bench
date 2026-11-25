@@ -1,0 +1,581 @@
+{
+ "_note": "Minutes and price per sheet. A model's minutes are the wall-clock length of its session (Gemini 4 Argon: of its one call) and its price is the tokens that session used at the vendor's list price on 24 November 2026, cached input at its own rate. Kamai's minutes run from upload to the first once-a-minute status check that saw the sheet finished, thirty sheets per batch, so they are an upper bound; its price is Kamai's price per sheet, which falls from $2.00 to $0.50 with volume. Claude Opus 5.5 was rate-limited when many sessions ran at once, so its 312-sheet minutes are over the 35 sessions run eight at a time; its price is over all sessions. The fifteen released sheets of every agent were run before that, a few sessions at a time.",
+ "prices_usd_per_million_tokens": {
+  "GPT-6 Astra": {
+   "input": 10,
+   "cached_input": 1,
+   "output": 50
+  },
+  "GPT-6.1 Sol": {
+   "input": 2,
+   "cached_input": 0.1,
+   "output": 10
+  },
+  "Claude Opus 5.5": {
+   "input": 4,
+   "cache_write_5m": 5,
+   "cache_read": 0.2,
+   "output": 20
+  },
+  "Gemini 4 Argon": {
+   "input": 2,
+   "output": 10,
+   "note": "list price until 30 November 2026"
+  }
+ },
+ "price_sources_checked": "2026-11-24, the vendors' own pricing pages",
+ "kamai_price_per_sheet_usd": [
+  0.5,
+  2.0
+ ],
+ "all_312_sheets": {
+  "Kamai Nov26": {
+   "sheets": 312,
+   "sessions_timed": 312,
+   "minutes_median": 2.15,
+   "minutes_min": 0.82,
+   "minutes_max": 5.22
+  },
+  "GPT-6 Astra": {
+   "sheets": 312,
+   "sessions_timed": 312,
+   "minutes_median": 8.69,
+   "minutes_min": 1.66,
+   "minutes_max": 53.16,
+   "price_mean_usd": 2.1242,
+   "price_min_usd": 0.5496,
+   "price_max_usd": 6.2665,
+   "price_total_usd": 662.76
+  },
+  "GPT-6.1 Sol": {
+   "sheets": 312,
+   "sessions_timed": 312,
+   "minutes_median": 11.54,
+   "minutes_min": 1.66,
+   "minutes_max": 33.05,
+   "price_mean_usd": 0.5938,
+   "price_min_usd": 0.1358,
+   "price_max_usd": 1.8148,
+   "price_total_usd": 185.26
+  },
+  "Claude Opus 5.5": {
+   "sheets": 312,
+   "sessions_timed": 35,
+   "minutes_median": 12.16,
+   "minutes_min": 1.95,
+   "minutes_max": 27.86,
+   "price_mean_usd": 4.2872,
+   "price_min_usd": 0.7348,
+   "price_max_usd": 13.0842,
+   "price_total_usd": 1337.6
+  },
+  "Gemini 4 Argon": {
+   "sheets": 312,
+   "sessions_timed": 312,
+   "minutes_median": 2.75,
+   "minutes_min": 0.9,
+   "minutes_max": 9.01,
+   "price_mean_usd": 0.1521,
+   "price_min_usd": 0.0434,
+   "price_max_usd": 0.413,
+   "price_total_usd": 47.47
+  }
+ },
+ "released_15_sheets": {
+  "sheet_01": {
+   "Kamai Nov26": {
+    "minutes": 1.57
+   },
+   "GPT-6 Astra": {
+    "minutes": 6.11,
+    "price_usd": 2.1684,
+    "input_tokens": 767733,
+    "cached_input_tokens": 688512,
+    "output_tokens": 13754
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 8.53,
+    "price_usd": 0.6427,
+    "input_tokens": 1729445,
+    "cached_input_tokens": 1599744,
+    "output_tokens": 22331
+   },
+   "Claude Opus 5.5": {
+    "minutes": 9.33,
+    "price_usd": 3.4712,
+    "input_tokens": 112,
+    "cache_creation_input_tokens": 228101,
+    "cache_read_input_tokens": 7755558,
+    "output_tokens": 38957
+   },
+   "Gemini 4 Argon": {
+    "minutes": 3.97,
+    "price_usd": 0.21,
+    "input_tokens": 5940,
+    "output_tokens": 19815
+   }
+  },
+  "sheet_02": {
+   "Kamai Nov26": {
+    "minutes": 1.46
+   },
+   "GPT-6 Astra": {
+    "minutes": 5.07,
+    "price_usd": 1.4479,
+    "input_tokens": 343756,
+    "cached_input_tokens": 288256,
+    "output_tokens": 12093
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 5.58,
+    "price_usd": 0.3689,
+    "input_tokens": 759583,
+    "cached_input_tokens": 684544,
+    "output_tokens": 15033
+   },
+   "Claude Opus 5.5": {
+    "minutes": 6.48,
+    "price_usd": 2.0006,
+    "input_tokens": 74,
+    "cache_creation_input_tokens": 75743,
+    "cache_read_input_tokens": 4836352,
+    "output_tokens": 32718
+   },
+   "Gemini 4 Argon": {
+    "minutes": 1.95,
+    "price_usd": 0.1024,
+    "input_tokens": 3944,
+    "output_tokens": 9448
+   }
+  },
+  "sheet_03": {
+   "Kamai Nov26": {
+    "minutes": 2.21
+   },
+   "GPT-6 Astra": {
+    "minutes": 5.5,
+    "price_usd": 1.566,
+    "input_tokens": 402165,
+    "cached_input_tokens": 342912,
+    "output_tokens": 12611
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 6.46,
+    "price_usd": 0.3806,
+    "input_tokens": 747008,
+    "cached_input_tokens": 679424,
+    "output_tokens": 17753
+   },
+   "Claude Opus 5.5": {
+    "minutes": 6.57,
+    "price_usd": 2.3166,
+    "input_tokens": 86,
+    "cache_creation_input_tokens": 98707,
+    "cache_read_input_tokens": 5751219,
+    "output_tokens": 33622
+   },
+   "Gemini 4 Argon": {
+    "minutes": 3.26,
+    "price_usd": 0.1712,
+    "input_tokens": 4082,
+    "output_tokens": 16299
+   }
+  },
+  "sheet_04": {
+   "Kamai Nov26": {
+    "minutes": 1.58
+   },
+   "GPT-6 Astra": {
+    "minutes": 10.34,
+    "price_usd": 2.1787,
+    "input_tokens": 587327,
+    "cached_input_tokens": 542720,
+    "output_tokens": 23799
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 10.25,
+    "price_usd": 0.5277,
+    "input_tokens": 1036586,
+    "cached_input_tokens": 958080,
+    "output_tokens": 27490
+   },
+   "Claude Opus 5.5": {
+    "minutes": 19.83,
+    "price_usd": 4.9017,
+    "input_tokens": 134,
+    "cache_creation_input_tokens": 231129,
+    "cache_read_input_tokens": 11422568,
+    "output_tokens": 73052
+   },
+   "Gemini 4 Argon": {
+    "minutes": 2.57,
+    "price_usd": 0.1344,
+    "input_tokens": 4350,
+    "output_tokens": 12565
+   }
+  },
+  "sheet_05": {
+   "Kamai Nov26": {
+    "minutes": 2.33
+   },
+   "GPT-6 Astra": {
+    "minutes": 6.81,
+    "price_usd": 1.3556,
+    "input_tokens": 329528,
+    "cached_input_tokens": 294400,
+    "output_tokens": 14199
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 6.71,
+    "price_usd": 0.3802,
+    "input_tokens": 640627,
+    "cached_input_tokens": 570624,
+    "output_tokens": 18315
+   },
+   "Claude Opus 5.5": {
+    "minutes": 9.7,
+    "price_usd": 2.6539,
+    "input_tokens": 84,
+    "cache_creation_input_tokens": 129347,
+    "cache_read_input_tokens": 5499530,
+    "output_tokens": 45345
+   },
+   "Gemini 4 Argon": {
+    "minutes": 2.57,
+    "price_usd": 0.1347,
+    "input_tokens": 4799,
+    "output_tokens": 12511
+   }
+  },
+  "sheet_06": {
+   "Kamai Nov26": {
+    "minutes": 2.31
+   },
+   "GPT-6 Astra": {
+    "minutes": 6.63,
+    "price_usd": 2.0415,
+    "input_tokens": 650135,
+    "cached_input_tokens": 584832,
+    "output_tokens": 16073
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 8.88,
+    "price_usd": 0.5045,
+    "input_tokens": 824434,
+    "cached_input_tokens": 732800,
+    "output_tokens": 24799
+   },
+   "Claude Opus 5.5": {
+    "minutes": 8.88,
+    "price_usd": 2.5975,
+    "input_tokens": 82,
+    "cache_creation_input_tokens": 98973,
+    "cache_read_input_tokens": 5726366,
+    "output_tokens": 47850
+   },
+   "Gemini 4 Argon": {
+    "minutes": 2.39,
+    "price_usd": 0.1267,
+    "input_tokens": 4541,
+    "output_tokens": 11759
+   }
+  },
+  "sheet_07": {
+   "Kamai Nov26": {
+    "minutes": 1.85
+   },
+   "GPT-6 Astra": {
+    "minutes": 8.85,
+    "price_usd": 2.0559,
+    "input_tokens": 695820,
+    "cached_input_tokens": 642944,
+    "output_tokens": 17683
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 10.46,
+    "price_usd": 0.5624,
+    "input_tokens": 1201707,
+    "cached_input_tokens": 1122048,
+    "output_tokens": 29091
+   },
+   "Claude Opus 5.5": {
+    "minutes": 5.71,
+    "price_usd": 2.0852,
+    "input_tokens": 78,
+    "cache_creation_input_tokens": 100004,
+    "cache_read_input_tokens": 5091208,
+    "output_tokens": 28332
+   },
+   "Gemini 4 Argon": {
+    "minutes": 1.64,
+    "price_usd": 0.0862,
+    "input_tokens": 3581,
+    "output_tokens": 7901
+   }
+  },
+  "sheet_08": {
+   "Kamai Nov26": {
+    "minutes": 1.73
+   },
+   "GPT-6 Astra": {
+    "minutes": 5.63,
+    "price_usd": 1.198,
+    "input_tokens": 229167,
+    "cached_input_tokens": 201856,
+    "output_tokens": 14461
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 8.11,
+    "price_usd": 0.3635,
+    "input_tokens": 445626,
+    "cached_input_tokens": 395904,
+    "output_tokens": 22449
+   },
+   "Claude Opus 5.5": {
+    "minutes": 12.04,
+    "price_usd": 3.8686,
+    "input_tokens": 134,
+    "cache_creation_input_tokens": 131584,
+    "cache_read_input_tokens": 10426866,
+    "output_tokens": 56237
+   },
+   "Gemini 4 Argon": {
+    "minutes": 4.26,
+    "price_usd": 0.2251,
+    "input_tokens": 6468,
+    "output_tokens": 21213
+   }
+  },
+  "sheet_09": {
+   "Kamai Nov26": {
+    "minutes": 2.66
+   },
+   "GPT-6 Astra": {
+    "minutes": 16.75,
+    "price_usd": 2.9093,
+    "input_tokens": 1005784,
+    "cached_input_tokens": 961792,
+    "output_tokens": 30151
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 14.29,
+    "price_usd": 0.6995,
+    "input_tokens": 1597603,
+    "cached_input_tokens": 1520896,
+    "output_tokens": 39401
+   },
+   "Claude Opus 5.5": {
+    "minutes": 13.25,
+    "price_usd": 3.1964,
+    "input_tokens": 98,
+    "cache_creation_input_tokens": 129365,
+    "cache_read_input_tokens": 7374662,
+    "output_tokens": 53715
+   },
+   "Gemini 4 Argon": {
+    "minutes": 3.95,
+    "price_usd": 0.2178,
+    "input_tokens": 10192,
+    "output_tokens": 19746
+   }
+  },
+  "sheet_10": {
+   "Kamai Nov26": {
+    "minutes": 2.56
+   },
+   "GPT-6 Astra": {
+    "minutes": 9.92,
+    "price_usd": 2.5031,
+    "input_tokens": 717253,
+    "cached_input_tokens": 647552,
+    "output_tokens": 23170
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 12.05,
+    "price_usd": 0.5744,
+    "input_tokens": 1084371,
+    "cached_input_tokens": 1015808,
+    "output_tokens": 33565
+   },
+   "Claude Opus 5.5": {
+    "minutes": 12.97,
+    "price_usd": 4.1319,
+    "input_tokens": 160,
+    "cache_creation_input_tokens": 121497,
+    "cache_read_input_tokens": 12516798,
+    "output_tokens": 51023
+   },
+   "Gemini 4 Argon": {
+    "minutes": 2.37,
+    "price_usd": 0.1234,
+    "input_tokens": 5040,
+    "output_tokens": 11335
+   }
+  },
+  "sheet_11": {
+   "Kamai Nov26": {
+    "minutes": 4.01
+   },
+   "GPT-6 Astra": {
+    "minutes": 13.24,
+    "price_usd": 2.7547,
+    "input_tokens": 672341,
+    "cached_input_tokens": 612608,
+    "output_tokens": 30895
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 14.52,
+    "price_usd": 0.6969,
+    "input_tokens": 1436698,
+    "cached_input_tokens": 1346944,
+    "output_tokens": 38271
+   },
+   "Claude Opus 5.5": {
+    "minutes": 19.4,
+    "price_usd": 4.5368,
+    "input_tokens": 130,
+    "cache_creation_input_tokens": 241764,
+    "cache_read_input_tokens": 10279666,
+    "output_tokens": 63575
+   },
+   "Gemini 4 Argon": {
+    "minutes": 4.26,
+    "price_usd": 0.2169,
+    "input_tokens": 3851,
+    "output_tokens": 20922
+   }
+  },
+  "sheet_12": {
+   "Kamai Nov26": {
+    "minutes": 4.45
+   },
+   "GPT-6 Astra": {
+    "minutes": 14.45,
+    "price_usd": 3.9182,
+    "input_tokens": 1473146,
+    "cached_input_tokens": 1394560,
+    "output_tokens": 34756
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 17.22,
+    "price_usd": 0.7535,
+    "input_tokens": 1473903,
+    "cached_input_tokens": 1394944,
+    "output_tokens": 45609
+   },
+   "Claude Opus 5.5": {
+    "minutes": 27.86,
+    "price_usd": 6.0461,
+    "input_tokens": 162,
+    "cache_creation_input_tokens": 201289,
+    "cache_read_input_tokens": 16282078,
+    "output_tokens": 89128
+   },
+   "Gemini 4 Argon": {
+    "minutes": 4.15,
+    "price_usd": 0.2117,
+    "input_tokens": 3831,
+    "output_tokens": 20408
+   }
+  },
+  "sheet_13": {
+   "Kamai Nov26": {
+    "minutes": 3.17
+   },
+   "GPT-6 Astra": {
+    "minutes": 16.54,
+    "price_usd": 2.9037,
+    "input_tokens": 675264,
+    "cached_input_tokens": 631808,
+    "output_tokens": 36746
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 24.8,
+    "price_usd": 1.3546,
+    "input_tokens": 4102337,
+    "cached_input_tokens": 3963776,
+    "output_tokens": 68107
+   },
+   "Claude Opus 5.5": {
+    "minutes": 27.68,
+    "price_usd": 7.7614,
+    "input_tokens": 196,
+    "cache_creation_input_tokens": 316077,
+    "cache_read_input_tokens": 20340503,
+    "output_tokens": 105605
+   },
+   "Gemini 4 Argon": {
+    "minutes": 5.54,
+    "price_usd": 0.2922,
+    "input_tokens": 7210,
+    "output_tokens": 27777
+   }
+  },
+  "sheet_14": {
+   "Kamai Nov26": {
+    "minutes": 4.64
+   },
+   "GPT-6 Astra": {
+    "minutes": 24.47,
+    "price_usd": 5.277,
+    "input_tokens": 1633135,
+    "cached_input_tokens": 1547904,
+    "output_tokens": 57536
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 32.72,
+    "price_usd": 1.6004,
+    "input_tokens": 4589704,
+    "cached_input_tokens": 4446848,
+    "output_tokens": 86998
+   },
+   "Claude Opus 5.5": {
+    "minutes": 14.03,
+    "price_usd": 4.3352,
+    "input_tokens": 146,
+    "cache_creation_input_tokens": 134447,
+    "cache_read_input_tokens": 11997403,
+    "output_tokens": 63143
+   },
+   "Gemini 4 Argon": {
+    "minutes": 3.1,
+    "price_usd": 0.1433,
+    "input_tokens": 2673,
+    "output_tokens": 13792
+   }
+  },
+  "sheet_15": {
+   "Kamai Nov26": {
+    "minutes": 3.62
+   },
+   "GPT-6 Astra": {
+    "minutes": 14.41,
+    "price_usd": 2.9544,
+    "input_tokens": 565056,
+    "cached_input_tokens": 507136,
+    "output_tokens": 37361
+   },
+   "GPT-6.1 Sol": {
+    "minutes": 26.29,
+    "price_usd": 1.7747,
+    "input_tokens": 7582946,
+    "cached_input_tokens": 7384448,
+    "output_tokens": 63926
+   },
+   "Claude Opus 5.5": {
+    "minutes": 16.85,
+    "price_usd": 4.3634,
+    "input_tokens": 154,
+    "cache_creation_input_tokens": 136724,
+    "cache_read_input_tokens": 12480769,
+    "output_tokens": 59149
+   },
+   "Gemini 4 Argon": {
+    "minutes": 6.13,
+    "price_usd": 0.3173,
+    "input_tokens": 6295,
+    "output_tokens": 30472
+   }
+  }
+ }
+}
